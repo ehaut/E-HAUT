@@ -93,7 +93,7 @@ size_t srun3k_login(const char *url, payload_t *payload, const char *key, char *
             return 0;
         } else {
             std::cout << readBuffer << std::endl;
-            size_t ret_size = sizeof(char) * readBuffer.length();
+            size_t ret_size = sizeof(char) * (readBuffer.length() + 1);
             *response = (char *)malloc(ret_size);
             snprintf(*response, ret_size, "%s", readBuffer.c_str());
             return ret_size;
@@ -127,7 +127,7 @@ size_t srun3k_logout(const char *url, Payload payload, char **response) {
 
         if (res == CURLE_OK) {
             std::cout << readBuffer << std::endl;
-            size_t ret_size = sizeof(char) * readBuffer.length();
+            size_t ret_size = sizeof(char) * (readBuffer.length() + 1);
             *response = (char *)malloc(ret_size);
             snprintf(*response, ret_size, "%s", readBuffer.c_str());
             return ret_size;
