@@ -84,6 +84,18 @@
                     <modifierMask key="keyEquivalentModifierMask"/>
                     <menu key="submenu" title="Help" systemMenu="help" id="F2S-fz-NVQ">
                         <items>
+                            <menuItem title="Check Update" id="cju-FH-hss">
+                                <modifierMask key="keyEquivalentModifierMask"/>
+                                <connections>
+                                    <action selector="checkUpdate:" target="Voe-Tx-rLC" id="4B4-d7-rx1"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="Report Issue" id="9nu-op-ceX">
+                                <modifierMask key="keyEquivalentModifierMask"/>
+                                <connections>
+                                    <action selector="reportIssue:" target="Voe-Tx-rLC" id="HdC-ld-pLA"/>
+                                </connections>
+                            </menuItem>
                             <menuItem title="EasyHautX Help" keyEquivalent="?" id="FKE-Sm-Kum">
                                 <connections>
                                     <action selector="showHelp:" target="-1" id="y7X-2Q-9no"/>

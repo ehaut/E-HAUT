@@ -111,4 +111,10 @@
     }
 }
 
+- (IBAction)reportIssue:(id)sender {
+    @autoreleasepool {
+        [[NSWorkspace sharedWorkspace] openURL:[NSURL URLWithString:@"https://github.com/ehaut/EasyHautX/issues/new"]];
+    }
+}
+
 @end
