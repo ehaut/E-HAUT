@@ -8,6 +8,7 @@
 
 #include <iostream>
 #include <list>
+#include <sstream>
 #include <string.h>
 
 #include <curl/curl.h>
@@ -23,12 +24,24 @@ typedef list<Param> ParamList;
 std::string readBuffer;
 
 // 生成 curl post payload
-static curl_httppost *construct_post_payload(ParamList param_list) {
-    struct curl_httppost *post = NULL, *last = NULL;
-
-    for (auto param : param_list)
-        curl_formadd(&post, &last, CURLFORM_COPYNAME, param.first, CURLFORM_COPYCONTENTS, param.second, CURLFORM_END);
-    return post;
+void curl_set_post_payload(CURL *curl, ParamList param_list) {
+    std::ostringstream oss;
+    char *param_key = NULL, *param_value = NULL;
+    for (auto param : param_list) {
+        // param's key
+        param_key = curl_easy_escape(curl, param.first, (int)strlen(param.first));
+        param_value = curl_easy_escape(curl, param.second, (int)strlen(param.second));
+        oss << param_key << '=' << param_value << '&';
+        free(param_key);
+        free(param_value);
+    }
+    size_t postdata_size = sizeof(char) * oss.str().length();
+    char *postdata = (char *)malloc(postdata_size);
+    snprintf(postdata, postdata_size, "%s", oss.str().c_str());
+    std::cout << postdata << std::endl;
+    curl_easy_setopt(curl, CURLOPT_POSTFIELDSIZE, strlen(postdata));
+    curl_easy_setopt(curl, CURLOPT_POSTFIELDS, postdata);
+    curl_easy_setopt(curl, CURLOPT_POST, 1L);
 }
 
 // http response 写入回调函数
@@ -52,7 +65,7 @@ size_t srun3k_login(const char *url, payload_t *payload, const char *key, char *
         curl_easy_setopt(curl, CURLOPT_URL, url);
 
         // 构造 post 参数
-        ParamList list{
+        ParamList params{
             make_pair("action", "login"),
             make_pair("username", username_encrypt(payload->username)),
             make_pair("password", password_encrypt(payload->password, key)),
@@ -65,8 +78,7 @@ size_t srun3k_login(const char *url, payload_t *payload, const char *key, char *
             make_pair("ac_id", payload->ac_id),
             make_pair("mac", payload->mac),
         };
-        struct curl_httppost *post = construct_post_payload(list);
-        curl_easy_setopt(curl, CURLOPT_HTTPPOST, post);
+        curl_set_post_payload(curl, params);
 
         // 设置 http 响应处理
         readBuffer.clear();
@@ -75,8 +87,6 @@ size_t srun3k_login(const char *url, payload_t *payload, const char *key, char *
         // 发送 http 请求
         res = curl_easy_perform(curl);
 
-        // 清理 post
-        curl_formfree(post);
         curl_easy_cleanup(curl);
 
         if (res != CURLE_OK) {
@@ -106,15 +116,13 @@ size_t srun3k_logout(const char *url, Payload payload, char **response) {
             make_pair("type", payload->type), make_pair("ac_id", payload->ac_id),
             make_pair("mac", payload->mac),
         };
-        struct curl_httppost *post = construct_post_payload(params);
-        curl_easy_setopt(curl, CURLOPT_HTTPPOST, post);
+        curl_set_post_payload(curl, params);
 
         readBuffer.clear();
         curl_easy_setopt(curl, CURLOPT_WRITEFUNCTION, writefunc);
 
         res = curl_easy_perform(curl);
 
-        curl_formfree(post);
         curl_easy_cleanup(curl);
 
         if (res == CURLE_OK) {
