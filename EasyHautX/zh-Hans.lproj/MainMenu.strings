@@ -1,0 +1,144 @@
+
+/* Class = "NSMenuItem"; title = "EasyHautX"; ObjectID = "1Xt-HY-uBw"; */
+"1Xt-HY-uBw.title" = "EasyHautX";
+
+/* Class = "NSTextFieldCell"; title = "02:00:00:00:00:00"; ObjectID = "2xY-oI-4h0"; */
+"2xY-oI-4h0.title" = "02:00:00:00:00:00";
+
+/* Class = "NSButtonCell"; title = "Check Update"; ObjectID = "3MY-8M-JOE"; */
+"3MY-8M-JOE.title" = "检查更新";
+
+/* Class = "NSMenuItem"; title = "Quit EasyHautX"; ObjectID = "4sb-4s-VLi"; */
+"4sb-4s-VLi.title" = "退出 EasyHautX";
+
+/* Class = "NSTextFieldCell"; title = "117"; ObjectID = "52x-NY-Xzl"; */
+"52x-NY-Xzl.title" = "117";
+
+/* Class = "NSMenuItem"; title = "About EasyHautX"; ObjectID = "5kV-Vb-QxS"; */
+"5kV-Vb-QxS.title" = "关于 EasyHautX";
+
+/* Class = "NSButtonCell"; title = "Logout"; ObjectID = "6W0-vy-TIV"; */
+"6W0-vy-TIV.title" = "注销";
+
+/* Class = "NSTextFieldCell"; title = "drop"; ObjectID = "76D-ra-cCj"; */
+"76D-ra-cCj.title" = "drop";
+
+/* Class = "NSMenuItem"; title = "Report Issue"; ObjectID = "9nu-op-ceX"; */
+"9nu-op-ceX.title" = "报告问题/Bug";
+
+/* Class = "NSTextFieldCell"; title = "Server"; ObjectID = "9xh-X0-ChK"; */
+"9xh-X0-ChK.title" = "服务器";
+
+/* Class = "NSMenu"; title = "Main Menu"; ObjectID = "AYu-sK-qS6"; */
+"AYu-sK-qS6.title" = "Main Menu";
+
+/* Class = "NSTextFieldCell"; title = "mac"; ObjectID = "BAZ-k0-IiV"; */
+"BAZ-k0-IiV.title" = "MAC地址";
+
+/* Class = "NSMenuItem"; title = "Preferences…"; ObjectID = "BOF-NM-1cW"; */
+"BOF-NM-1cW.title" = "偏好设置…";
+
+/* Class = "NSTextFieldCell"; title = "type"; ObjectID = "Cex-mv-nP7"; */
+"Cex-mv-nP7.title" = "type";
+
+/* Class = "NSMenu"; title = "Help"; ObjectID = "F2S-fz-NVQ"; */
+"F2S-fz-NVQ.title" = "帮助";
+
+/* Class = "NSMenuItem"; title = "EasyHautX Help"; ObjectID = "FKE-Sm-Kum"; */
+"FKE-Sm-Kum.title" = "EasyHautX 帮助";
+
+/* Class = "NSTextFieldCell"; title = "10"; ObjectID = "H66-au-lJ3"; */
+"H66-au-lJ3.title" = "10";
+
+/* Class = "NSTextFieldCell"; title = "0"; ObjectID = "Ie8-Mi-qVR"; */
+"Ie8-Mi-qVR.title" = "0";
+
+/* Class = "NSButtonCell"; title = "Login"; ObjectID = "Jaf-Eb-72C"; */
+"Jaf-Eb-72C.title" = "登录";
+
+/* Class = "NSButtonCell"; title = "Exit"; ObjectID = "KGd-IM-SMy"; */
+"KGd-IM-SMy.title" = "退出";
+
+/* Class = "NSMenuItem"; title = "Show All"; ObjectID = "Kd2-mp-pUS"; */
+"Kd2-mp-pUS.title" = "显示全部";
+
+/* Class = "NSMenuItem"; title = "Services"; ObjectID = "NMo-om-nkz"; */
+"NMo-om-nkz.title" = "服务";
+
+/* Class = "NSWindow"; title = "Reponse"; ObjectID = "NUR-II-t8q"; */
+"NUR-II-t8q.title" = "响应";
+
+/* Class = "NSTextFieldCell"; title = "0"; ObjectID = "Ojm-rf-DYU"; */
+"Ojm-rf-DYU.title" = "0";
+
+/* Class = "NSMenuItem"; title = "Hide EasyHautX"; ObjectID = "Olw-nP-bQN"; */
+"Olw-nP-bQN.title" = "隐藏 EasyHautX";
+
+/* Class = "NSWindow"; title = "EasyHautX"; ObjectID = "QvC-M9-y7g"; */
+"QvC-M9-y7g.title" = "EasyHautX";
+
+/* Class = "NSTextFieldCell"; title = "Username"; ObjectID = "Rg2-Db-dgy"; */
+"Rg2-Db-dgy.title" = "用户名";
+
+/* Class = "NSSecureTextFieldCell"; placeholderString = "Type your password"; ObjectID = "Tq8-x5-JUJ"; */
+"Tq8-x5-JUJ.placeholderString" = "输入你的密码";
+
+/* Class = "NSMenuItem"; title = "Hide Others"; ObjectID = "Vdr-fp-XzO"; */
+"Vdr-fp-XzO.title" = "隐藏其他";
+
+/* Class = "NSTextFieldCell"; title = "0"; ObjectID = "Vnc-gf-nT9"; */
+"Vnc-gf-nT9.title" = "0";
+
+/* Class = "NSTextFieldCell"; title = "Copyright © ehaut 2018. All rights reserved."; ObjectID = "aMo-cp-YBo"; */
+"aMo-cp-YBo.title" = "Copyright © ehaut 2018. All rights reserved.";
+
+/* Class = "NSTextFieldCell"; title = "http://172.16.154.130:69/cgi-bin/srun_portal"; ObjectID = "b8c-4g-5m3"; */
+"b8c-4g-5m3.title" = "http://172.16.154.130:69/cgi-bin/srun_portal";
+
+/* Class = "NSMenuItem"; title = "Check Update"; ObjectID = "cju-FH-hss"; */
+"cju-FH-hss.title" = "检查更新";
+
+/* Class = "NSTextFieldCell"; title = "minutes"; ObjectID = "efm-JQ-XrF"; */
+"efm-JQ-XrF.title" = "minutes";
+
+/* Class = "NSTextFieldCell"; placeholderString = "Type your username"; ObjectID = "frH-IP-WeJ"; */
+"frH-IP-WeJ.placeholderString" = "输入你的用户名";
+
+/* Class = "NSTextFieldCell"; title = "Password"; ObjectID = "hSD-1U-0dA"; */
+"hSD-1U-0dA.title" = "密码";
+
+/* Class = "NSMenu"; title = "Services"; ObjectID = "hz9-B4-Xy5"; */
+"hz9-B4-Xy5.title" = "服务";
+
+/* Class = "NSTextFieldCell"; title = "1234567890"; ObjectID = "k1J-XD-MZb"; */
+"k1J-XD-MZb.title" = "1234567890";
+
+/* Class = "NSTextFieldCell"; title = "n"; ObjectID = "l8X-fE-SDA"; */
+"l8X-fE-SDA.title" = "n";
+
+/* Class = "NSTextFieldCell"; title = "Password Key"; ObjectID = "lma-x4-Ohi"; */
+"lma-x4-Ohi.title" = "Password Key";
+
+/* Class = "NSTextFieldCell"; title = "pop"; ObjectID = "nLx-3Y-iBp"; */
+"nLx-3Y-iBp.title" = "pop";
+
+/* Class = "NSTextFieldCell"; title = "ac_id"; ObjectID = "p4n-eU-i1h"; */
+"p4n-eU-i1h.title" = "ac_id";
+
+/* Class = "NSTextFieldCell"; title = "1"; ObjectID = "qVi-Tj-uFO"; */
+"qVi-Tj-uFO.title" = "1";
+
+/* Class = "NSTextFieldCell"; title = "1"; ObjectID = "r1Z-FI-Esh"; */
+"r1Z-FI-Esh.title" = "1";
+
+/* Class = "NSTextFieldCell"; title = "Version Unknown"; ObjectID = "scZ-Dw-R4L"; */
+"scZ-Dw-R4L.title" = "Version Unknown";
+
+/* Class = "NSMenu"; title = "EasyHautX"; ObjectID = "uQy-DD-JDr"; */
+"uQy-DD-JDr.title" = "EasyHautX";
+
+/* Class = "NSTextFieldCell"; title = "mbytes"; ObjectID = "ud6-yR-OgJ"; */
+"ud6-yR-OgJ.title" = "mbytes";
+
+/* Class = "NSMenuItem"; title = "Help"; ObjectID = "wpr-3q-Mcd"; */
+"wpr-3q-Mcd.title" = "帮助";
