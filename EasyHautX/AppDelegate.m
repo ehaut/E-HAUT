@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "httpclient.h"
+#import "version.h"
 
 @interface AppDelegate ()
 
@@ -36,8 +37,7 @@
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
     // Insert code here to initialize your application
     @autoreleasepool {
-        NSString *version = [[[NSBundle mainBundle] infoDictionary] valueForKey:@"CFBundleShortVersionString"];
-        NSString *labelVersion = [NSString stringWithFormat:@"Version %@", version];
+        NSString *labelVersion = [NSString stringWithUTF8String:ehautx_version()];
         [self.versionLabel setStringValue:labelVersion];
     }
 }

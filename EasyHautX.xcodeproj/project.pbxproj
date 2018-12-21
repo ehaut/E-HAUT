@@ -18,6 +18,7 @@
 		FB08F74021CB8DC1006E5DE4 /* libcurl.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = FB08F73F21CB8DC1006E5DE4 /* libcurl.tbd */; };
 		FB08F74D21CBA383006E5DE4 /* encrypt.cc in Sources */ = {isa = PBXBuildFile; fileRef = FB08F74C21CBA383006E5DE4 /* encrypt.cc */; };
 		FB08F75221CBA5DB006E5DE4 /* httpclient.cc in Sources */ = {isa = PBXBuildFile; fileRef = FB08F75021CBA5DA006E5DE4 /* httpclient.cc */; };
+		FB08F75421CCBB3E006E5DE4 /* version.m in Sources */ = {isa = PBXBuildFile; fileRef = FB08F75321CCBB3E006E5DE4 /* version.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +60,8 @@
 		FB08F74C21CBA383006E5DE4 /* encrypt.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = encrypt.cc; sourceTree = "<group>"; };
 		FB08F75021CBA5DA006E5DE4 /* httpclient.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = httpclient.cc; sourceTree = "<group>"; };
 		FB08F75121CBA5DA006E5DE4 /* httpclient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = httpclient.h; sourceTree = "<group>"; };
+		FB08F75321CCBB3E006E5DE4 /* version.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = version.m; sourceTree = "<group>"; };
+		FB08F75521CCBB54006E5DE4 /* version.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = version.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,6 +127,8 @@
 				FB08F71521CB8D74006E5DE4 /* Info.plist */,
 				FB08F71621CB8D74006E5DE4 /* main.m */,
 				FB08F71821CB8D74006E5DE4 /* EasyHautX.entitlements */,
+				FB08F75321CCBB3E006E5DE4 /* version.m */,
+				FB08F75521CCBB54006E5DE4 /* version.h */,
 			);
 			path = EasyHautX;
 			sourceTree = "<group>";
@@ -290,6 +295,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FB08F75421CCBB3E006E5DE4 /* version.m in Sources */,
 				FB08F75221CBA5DB006E5DE4 /* httpclient.cc in Sources */,
 				FB08F71721CB8D74006E5DE4 /* main.m in Sources */,
 				FB08F74D21CBA383006E5DE4 /* encrypt.cc in Sources */,

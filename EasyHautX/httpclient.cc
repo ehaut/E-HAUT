@@ -15,6 +15,7 @@
 
 #include "encrypt.h"
 #include "httpclient.h"
+#include "version.h"
 
 using namespace std;
 
@@ -84,6 +85,9 @@ size_t srun3k_login(const char *url, payload_t *payload, const char *key, char *
         readBuffer.clear();
         curl_easy_setopt(curl, CURLOPT_WRITEFUNCTION, writefunc);
 
+        // 设置 User-Agent
+        curl_easy_setopt(curl, CURLOPT_USERAGENT, ehautx_user_agent());
+
         // 发送 http 请求
         res = curl_easy_perform(curl);
 
@@ -120,6 +124,8 @@ size_t srun3k_logout(const char *url, Payload payload, char **response) {
 
         readBuffer.clear();
         curl_easy_setopt(curl, CURLOPT_WRITEFUNCTION, writefunc);
+
+        curl_easy_setopt(curl, CURLOPT_USERAGENT, ehautx_user_agent());
 
         res = curl_easy_perform(curl);
 
