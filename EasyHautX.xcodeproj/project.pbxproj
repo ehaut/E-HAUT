@@ -1,0 +1,602 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		FB08F70F21CB8D72006E5DE4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FB08F70E21CB8D72006E5DE4 /* AppDelegate.m */; };
+		FB08F71121CB8D74006E5DE4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FB08F71021CB8D74006E5DE4 /* Assets.xcassets */; };
+		FB08F71421CB8D74006E5DE4 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = FB08F71221CB8D74006E5DE4 /* MainMenu.xib */; };
+		FB08F71721CB8D74006E5DE4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FB08F71621CB8D74006E5DE4 /* main.m */; };
+		FB08F72221CB8D74006E5DE4 /* EasyHautXTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FB08F72121CB8D74006E5DE4 /* EasyHautXTests.m */; };
+		FB08F72D21CB8D74006E5DE4 /* EasyHautXUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = FB08F72C21CB8D74006E5DE4 /* EasyHautXUITests.m */; };
+		FB08F73C21CB8DB3006E5DE4 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB08F73B21CB8DB3006E5DE4 /* Security.framework */; };
+		FB08F73E21CB8DBB006E5DE4 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = FB08F73D21CB8DBB006E5DE4 /* libz.tbd */; };
+		FB08F74021CB8DC1006E5DE4 /* libcurl.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = FB08F73F21CB8DC1006E5DE4 /* libcurl.tbd */; };
+		FB08F74D21CBA383006E5DE4 /* encrypt.cc in Sources */ = {isa = PBXBuildFile; fileRef = FB08F74C21CBA383006E5DE4 /* encrypt.cc */; };
+		FB08F75221CBA5DB006E5DE4 /* httpclient.cc in Sources */ = {isa = PBXBuildFile; fileRef = FB08F75021CBA5DA006E5DE4 /* httpclient.cc */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		FB08F71E21CB8D74006E5DE4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FB08F70221CB8D72006E5DE4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FB08F70921CB8D72006E5DE4;
+			remoteInfo = EasyHautX;
+		};
+		FB08F72921CB8D74006E5DE4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FB08F70221CB8D72006E5DE4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FB08F70921CB8D72006E5DE4;
+			remoteInfo = EasyHautX;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		FB08F70A21CB8D72006E5DE4 /* EasyHautX.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EasyHautX.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FB08F70D21CB8D72006E5DE4 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		FB08F70E21CB8D72006E5DE4 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		FB08F71021CB8D74006E5DE4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		FB08F71321CB8D74006E5DE4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		FB08F71521CB8D74006E5DE4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FB08F71621CB8D74006E5DE4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		FB08F71821CB8D74006E5DE4 /* EasyHautX.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = EasyHautX.entitlements; sourceTree = "<group>"; };
+		FB08F71D21CB8D74006E5DE4 /* EasyHautXTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EasyHautXTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FB08F72121CB8D74006E5DE4 /* EasyHautXTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EasyHautXTests.m; sourceTree = "<group>"; };
+		FB08F72321CB8D74006E5DE4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FB08F72821CB8D74006E5DE4 /* EasyHautXUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EasyHautXUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FB08F72C21CB8D74006E5DE4 /* EasyHautXUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EasyHautXUITests.m; sourceTree = "<group>"; };
+		FB08F72E21CB8D74006E5DE4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FB08F73B21CB8DB3006E5DE4 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		FB08F73D21CB8DBB006E5DE4 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		FB08F73F21CB8DC1006E5DE4 /* libcurl.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libcurl.tbd; path = usr/lib/libcurl.tbd; sourceTree = SDKROOT; };
+		FB08F74921CBA0B5006E5DE4 /* encrypt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = encrypt.h; sourceTree = "<group>"; };
+		FB08F74C21CBA383006E5DE4 /* encrypt.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = encrypt.cc; sourceTree = "<group>"; };
+		FB08F75021CBA5DA006E5DE4 /* httpclient.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = httpclient.cc; sourceTree = "<group>"; };
+		FB08F75121CBA5DA006E5DE4 /* httpclient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = httpclient.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FB08F70721CB8D72006E5DE4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FB08F74021CB8DC1006E5DE4 /* libcurl.tbd in Frameworks */,
+				FB08F73E21CB8DBB006E5DE4 /* libz.tbd in Frameworks */,
+				FB08F73C21CB8DB3006E5DE4 /* Security.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FB08F71A21CB8D74006E5DE4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FB08F72521CB8D74006E5DE4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		FB08F70121CB8D72006E5DE4 = {
+			isa = PBXGroup;
+			children = (
+				FB08F70C21CB8D72006E5DE4 /* EasyHautX */,
+				FB08F72021CB8D74006E5DE4 /* EasyHautXTests */,
+				FB08F72B21CB8D74006E5DE4 /* EasyHautXUITests */,
+				FB08F70B21CB8D72006E5DE4 /* Products */,
+				FB08F73A21CB8DB3006E5DE4 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		FB08F70B21CB8D72006E5DE4 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FB08F70A21CB8D72006E5DE4 /* EasyHautX.app */,
+				FB08F71D21CB8D74006E5DE4 /* EasyHautXTests.xctest */,
+				FB08F72821CB8D74006E5DE4 /* EasyHautXUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FB08F70C21CB8D72006E5DE4 /* EasyHautX */ = {
+			isa = PBXGroup;
+			children = (
+				FB08F75021CBA5DA006E5DE4 /* httpclient.cc */,
+				FB08F75121CBA5DA006E5DE4 /* httpclient.h */,
+				FB08F74C21CBA383006E5DE4 /* encrypt.cc */,
+				FB08F74921CBA0B5006E5DE4 /* encrypt.h */,
+				FB08F70D21CB8D72006E5DE4 /* AppDelegate.h */,
+				FB08F70E21CB8D72006E5DE4 /* AppDelegate.m */,
+				FB08F71221CB8D74006E5DE4 /* MainMenu.xib */,
+				FB08F71021CB8D74006E5DE4 /* Assets.xcassets */,
+				FB08F71521CB8D74006E5DE4 /* Info.plist */,
+				FB08F71621CB8D74006E5DE4 /* main.m */,
+				FB08F71821CB8D74006E5DE4 /* EasyHautX.entitlements */,
+			);
+			path = EasyHautX;
+			sourceTree = "<group>";
+		};
+		FB08F72021CB8D74006E5DE4 /* EasyHautXTests */ = {
+			isa = PBXGroup;
+			children = (
+				FB08F72121CB8D74006E5DE4 /* EasyHautXTests.m */,
+				FB08F72321CB8D74006E5DE4 /* Info.plist */,
+			);
+			path = EasyHautXTests;
+			sourceTree = "<group>";
+		};
+		FB08F72B21CB8D74006E5DE4 /* EasyHautXUITests */ = {
+			isa = PBXGroup;
+			children = (
+				FB08F72C21CB8D74006E5DE4 /* EasyHautXUITests.m */,
+				FB08F72E21CB8D74006E5DE4 /* Info.plist */,
+			);
+			path = EasyHautXUITests;
+			sourceTree = "<group>";
+		};
+		FB08F73A21CB8DB3006E5DE4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FB08F73F21CB8DC1006E5DE4 /* libcurl.tbd */,
+				FB08F73D21CB8DBB006E5DE4 /* libz.tbd */,
+				FB08F73B21CB8DB3006E5DE4 /* Security.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		FB08F70921CB8D72006E5DE4 /* EasyHautX */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FB08F73121CB8D74006E5DE4 /* Build configuration list for PBXNativeTarget "EasyHautX" */;
+			buildPhases = (
+				FB08F70621CB8D72006E5DE4 /* Sources */,
+				FB08F70721CB8D72006E5DE4 /* Frameworks */,
+				FB08F70821CB8D72006E5DE4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = EasyHautX;
+			productName = EasyHautX;
+			productReference = FB08F70A21CB8D72006E5DE4 /* EasyHautX.app */;
+			productType = "com.apple.product-type.application";
+		};
+		FB08F71C21CB8D74006E5DE4 /* EasyHautXTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FB08F73421CB8D74006E5DE4 /* Build configuration list for PBXNativeTarget "EasyHautXTests" */;
+			buildPhases = (
+				FB08F71921CB8D74006E5DE4 /* Sources */,
+				FB08F71A21CB8D74006E5DE4 /* Frameworks */,
+				FB08F71B21CB8D74006E5DE4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FB08F71F21CB8D74006E5DE4 /* PBXTargetDependency */,
+			);
+			name = EasyHautXTests;
+			productName = EasyHautXTests;
+			productReference = FB08F71D21CB8D74006E5DE4 /* EasyHautXTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		FB08F72721CB8D74006E5DE4 /* EasyHautXUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FB08F73721CB8D74006E5DE4 /* Build configuration list for PBXNativeTarget "EasyHautXUITests" */;
+			buildPhases = (
+				FB08F72421CB8D74006E5DE4 /* Sources */,
+				FB08F72521CB8D74006E5DE4 /* Frameworks */,
+				FB08F72621CB8D74006E5DE4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FB08F72A21CB8D74006E5DE4 /* PBXTargetDependency */,
+			);
+			name = EasyHautXUITests;
+			productName = EasyHautXUITests;
+			productReference = FB08F72821CB8D74006E5DE4 /* EasyHautXUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FB08F70221CB8D72006E5DE4 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1010;
+				ORGANIZATIONNAME = ehaut;
+				TargetAttributes = {
+					FB08F70921CB8D72006E5DE4 = {
+						CreatedOnToolsVersion = 10.1;
+						SystemCapabilities = {
+							com.apple.Sandbox = {
+								enabled = 1;
+							};
+						};
+					};
+					FB08F71C21CB8D74006E5DE4 = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = FB08F70921CB8D72006E5DE4;
+					};
+					FB08F72721CB8D74006E5DE4 = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = FB08F70921CB8D72006E5DE4;
+					};
+				};
+			};
+			buildConfigurationList = FB08F70521CB8D72006E5DE4 /* Build configuration list for PBXProject "EasyHautX" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = FB08F70121CB8D72006E5DE4;
+			productRefGroup = FB08F70B21CB8D72006E5DE4 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FB08F70921CB8D72006E5DE4 /* EasyHautX */,
+				FB08F71C21CB8D74006E5DE4 /* EasyHautXTests */,
+				FB08F72721CB8D74006E5DE4 /* EasyHautXUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		FB08F70821CB8D72006E5DE4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FB08F71121CB8D74006E5DE4 /* Assets.xcassets in Resources */,
+				FB08F71421CB8D74006E5DE4 /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FB08F71B21CB8D74006E5DE4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FB08F72621CB8D74006E5DE4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FB08F70621CB8D72006E5DE4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FB08F75221CBA5DB006E5DE4 /* httpclient.cc in Sources */,
+				FB08F71721CB8D74006E5DE4 /* main.m in Sources */,
+				FB08F74D21CBA383006E5DE4 /* encrypt.cc in Sources */,
+				FB08F70F21CB8D72006E5DE4 /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FB08F71921CB8D74006E5DE4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FB08F72221CB8D74006E5DE4 /* EasyHautXTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FB08F72421CB8D74006E5DE4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FB08F72D21CB8D74006E5DE4 /* EasyHautXUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		FB08F71F21CB8D74006E5DE4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FB08F70921CB8D72006E5DE4 /* EasyHautX */;
+			targetProxy = FB08F71E21CB8D74006E5DE4 /* PBXContainerItemProxy */;
+		};
+		FB08F72A21CB8D74006E5DE4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FB08F70921CB8D72006E5DE4 /* EasyHautX */;
+			targetProxy = FB08F72921CB8D74006E5DE4 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		FB08F71221CB8D74006E5DE4 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FB08F71321CB8D74006E5DE4 /* Base */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		FB08F72F21CB8D74006E5DE4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		FB08F73021CB8D74006E5DE4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		FB08F73221CB8D74006E5DE4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = EasyHautX/EasyHautX.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = EasyHautX/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				PRODUCT_BUNDLE_IDENTIFIER = cn.ehaut.EasyHautX;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		FB08F73321CB8D74006E5DE4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = EasyHautX/EasyHautX.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = EasyHautX/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				PRODUCT_BUNDLE_IDENTIFIER = cn.ehaut.EasyHautX;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		FB08F73521CB8D74006E5DE4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = EasyHautXTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = cn.ehaut.EasyHautXTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/EasyHautX.app/Contents/MacOS/EasyHautX";
+			};
+			name = Debug;
+		};
+		FB08F73621CB8D74006E5DE4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = EasyHautXTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = cn.ehaut.EasyHautXTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/EasyHautX.app/Contents/MacOS/EasyHautX";
+			};
+			name = Release;
+		};
+		FB08F73821CB8D74006E5DE4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = EasyHautXUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = cn.ehaut.EasyHautXUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = EasyHautX;
+			};
+			name = Debug;
+		};
+		FB08F73921CB8D74006E5DE4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = EasyHautXUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = cn.ehaut.EasyHautXUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = EasyHautX;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FB08F70521CB8D72006E5DE4 /* Build configuration list for PBXProject "EasyHautX" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FB08F72F21CB8D74006E5DE4 /* Debug */,
+				FB08F73021CB8D74006E5DE4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FB08F73121CB8D74006E5DE4 /* Build configuration list for PBXNativeTarget "EasyHautX" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FB08F73221CB8D74006E5DE4 /* Debug */,
+				FB08F73321CB8D74006E5DE4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FB08F73421CB8D74006E5DE4 /* Build configuration list for PBXNativeTarget "EasyHautXTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FB08F73521CB8D74006E5DE4 /* Debug */,
+				FB08F73621CB8D74006E5DE4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FB08F73721CB8D74006E5DE4 /* Build configuration list for PBXNativeTarget "EasyHautXUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FB08F73821CB8D74006E5DE4 /* Debug */,
+				FB08F73921CB8D74006E5DE4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = FB08F70221CB8D72006E5DE4 /* Project object */;
+}
