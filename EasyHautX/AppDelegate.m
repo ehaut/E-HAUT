@@ -27,6 +27,7 @@
 @property (weak) IBOutlet NSTextField *macTextField;
 
 @property (weak) IBOutlet NSTextField *responseArea;
+@property (weak) IBOutlet NSTextField *versionLabel;
 
 @end
 
@@ -34,6 +35,11 @@
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
     // Insert code here to initialize your application
+    @autoreleasepool {
+        NSString *version = [[[NSBundle mainBundle] infoDictionary] valueForKey:@"CFBundleShortVersionString"];
+        NSString *labelVersion = [NSString stringWithFormat:@"Version %@", version];
+        [self.versionLabel setStringValue:labelVersion];
+    }
 }
 
 - (void)applicationWillTerminate:(NSNotification *)aNotification {
@@ -41,9 +47,11 @@
 }
 
 - (IBAction)closeModal:(id)sender {
-    [self.modalWindow setIsVisible:false];
-    [self.responseArea setStringValue:@""];
-    [NSApp stopModal];
+    @autoreleasepool {
+        [self.modalWindow setIsVisible:false];
+        [self.responseArea setStringValue:@""];
+        [NSApp stopModal];
+    }
 }
 
 - (IBAction)loginClicked:(id)sender {
@@ -94,6 +102,12 @@
         [NSApp runModalForWindow:self.modalWindow];
 
         free(http_payload);
+    }
+}
+
+- (IBAction)checkUpdate:(id)sender {
+    @autoreleasepool {
+        [[NSWorkspace sharedWorkspace] openURL:[NSURL URLWithString:@"https://github.com/ehaut/EasyHautX/releases"]];
     }
 }
 

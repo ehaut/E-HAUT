@@ -29,6 +29,7 @@
                 <outlet property="serverTextField" destination="7U6-ZH-NCZ" id="3YV-nX-t94"/>
                 <outlet property="typeTextField" destination="Kzw-MG-Qbe" id="83S-SG-5ZV"/>
                 <outlet property="usernameTextField" destination="SMM-Fd-pmq" id="2Qw-Ex-IaT"/>
+                <outlet property="versionLabel" destination="fBy-ar-cP2" id="26j-Ia-9qh"/>
                 <outlet property="window" destination="QvC-M9-y7g" id="gIp-Ho-8D9"/>
             </connections>
         </customObject>
@@ -419,6 +420,26 @@
                         <textFieldCell key="cell" lineBreakMode="clipping" title="Copyright © ehaut 2018. All rights reserved." allowsEditingTextAttributes="YES" usesSingleLineMode="YES" id="aMo-cp-YBo">
                             <font key="font" metaFont="system"/>
                             <color key="textColor" name="systemGrayColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
+                    <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="T9Q-WY-79p">
+                        <rect key="frame" x="292" y="36" width="127" height="32"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <buttonCell key="cell" type="push" title="Check Update" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="3MY-8M-JOE">
+                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                            <font key="font" metaFont="system"/>
+                        </buttonCell>
+                        <connections>
+                            <action selector="checkUpdate:" target="Voe-Tx-rLC" id="RH3-mX-kd7"/>
+                        </connections>
+                    </button>
+                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fBy-ar-cP2">
+                        <rect key="frame" x="114" y="45" width="110" height="17"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <textFieldCell key="cell" lineBreakMode="clipping" alignment="left" title="Version Unknown" id="scZ-Dw-R4L">
+                            <font key="font" metaFont="system"/>
+                            <color key="textColor" name="tertiaryLabelColor" catalog="System" colorSpace="catalog"/>
                             <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                         </textFieldCell>
                     </textField>
