@@ -112,7 +112,7 @@ size_t srun3k_logout(const char *url, Payload payload, char **response) {
     if (curl && payload) {
         curl_easy_setopt(curl, CURLOPT_URL, url);
         ParamList params{
-            make_pair("action", "logout"),    make_pair("username", payload->username),
+            make_pair("action", "logout"),    make_pair("username", username_encrypt(payload->username)),
             make_pair("type", payload->type), make_pair("ac_id", payload->ac_id),
             make_pair("mac", payload->mac),
         };

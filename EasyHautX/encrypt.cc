@@ -27,7 +27,7 @@ const char *username_encrypt(const char *username) {
     for (int i = 0; i < strlen(username); ++i)
         oss << (char)(username[i] + 4);
 
-    snprintf(username_buffer, sizeof(username_buffer), "{SRUN}\r\n%s", oss.str().c_str());
+    snprintf(username_buffer, sizeof(username_buffer), "{SRUN3}\r\n%s", oss.str().c_str());
     return username_buffer;
 }
 
