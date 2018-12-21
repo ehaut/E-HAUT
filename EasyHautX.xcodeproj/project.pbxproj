@@ -63,6 +63,7 @@
 		FB08F75321CCBB3E006E5DE4 /* version.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = version.m; sourceTree = "<group>"; };
 		FB08F75521CCBB54006E5DE4 /* version.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = version.h; sourceTree = "<group>"; };
 		FB08F75821CCD88B006E5DE4 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/MainMenu.strings"; sourceTree = "<group>"; };
+		FB08F75A21CCDB65006E5DE4 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/MainMenu.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -344,6 +345,7 @@
 			children = (
 				FB08F71321CB8D74006E5DE4 /* Base */,
 				FB08F75821CCD88B006E5DE4 /* zh-Hans */,
+				FB08F75A21CCDB65006E5DE4 /* en */,
 			);
 			name = MainMenu.xib;
 			sourceTree = "<group>";
