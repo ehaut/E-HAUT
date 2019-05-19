@@ -96,6 +96,7 @@
     <Compile Include="View\AdvancedPrefsController.designer.cs">
       <DependentUpon>AdvancedPrefsController.cs</DependentUpon>
     </Compile>
+    <Compile Include="Service\Notify.cs" />
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="Main.storyboard" />

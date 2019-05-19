@@ -66,7 +66,18 @@ namespace EhautX.View
                 request.Timeout = Preferences.Timeout * 1000;
 
                 var response = client.Execute(request);
-                Console.WriteLine(response.Content);
+                switch (response.ResponseStatus)
+                {
+                    case RestSharp.ResponseStatus.TimedOut:
+                        Notify.Send("连接错误", "连接超时");
+                        break;
+                    case RestSharp.ResponseStatus.Error:
+                        Notify.Send("连接错误", "连接错误");
+                        break;
+                    default:
+                        Notify.Send("登录状态", response.Content);
+                        break;
+                }
             });
         }
 
@@ -86,7 +97,19 @@ namespace EhautX.View
                 request.Timeout = Preferences.Timeout * 1000;
 
                 var response = client.Execute(request);
-                Console.WriteLine(response.Content);
+
+                switch (response.ResponseStatus)
+                {
+                    case RestSharp.ResponseStatus.TimedOut:
+                        Notify.Send("连接错误", "连接超时");
+                        break;
+                    case RestSharp.ResponseStatus.Error:
+                        Notify.Send("连接错误", "连接错误");
+                        break;
+                    default:
+                        Notify.Send("登出状态", response.Content);
+                        break;
+                }
             });
         }
         #endregion
