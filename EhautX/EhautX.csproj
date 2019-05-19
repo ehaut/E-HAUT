@@ -68,6 +68,7 @@
     <Folder Include="Resources\" />
     <Folder Include="Service\" />
     <Folder Include="View\" />
+    <Folder Include="Model\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Info.plist" />
@@ -81,6 +82,19 @@
     <Compile Include="View\ViewController.cs" />
     <Compile Include="View\ViewController.designer.cs">
       <DependentUpon>ViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Model\AppPreferences.cs" />
+    <Compile Include="View\GeneralPrefsController.cs" />
+    <Compile Include="View\GeneralPrefsController.designer.cs">
+      <DependentUpon>GeneralPrefsController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\NetworkPrefsController.cs" />
+    <Compile Include="View\NetworkPrefsController.designer.cs">
+      <DependentUpon>NetworkPrefsController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\AdvancedPrefsController.cs" />
+    <Compile Include="View\AdvancedPrefsController.designer.cs">
+      <DependentUpon>AdvancedPrefsController.cs</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

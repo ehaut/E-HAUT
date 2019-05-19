@@ -1,4 +1,5 @@
 ﻿using AppKit;
+using EhautX.Model;
 using Foundation;
 
 namespace EhautX
@@ -6,6 +7,8 @@ namespace EhautX
     [Register("AppDelegate")]
     public class AppDelegate : NSApplicationDelegate
     {
+        public AppPreferences Preferences { get; set; } = new AppPreferences();
+
         public AppDelegate()
         {
         }

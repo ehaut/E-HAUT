@@ -9,14 +9,9 @@ using System.CodeDom.Compiler;
 
 namespace EhautX.View
 {
-	[Register ("ViewController")]
-	partial class ViewController
+	[Register ("GeneralPrefsController")]
+	partial class GeneralPrefsController
 	{
-		[Action ("loginButton:")]
-		partial void loginButton (Foundation.NSObject sender);
-
-		[Action ("logoutButton:")]
-		partial void logoutButton (Foundation.NSObject sender);
 		
 		void ReleaseDesignerOutlets ()
 		{
