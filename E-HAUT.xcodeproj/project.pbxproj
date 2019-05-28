@@ -9,11 +9,13 @@
 /* Begin PBXBuildFile section */
 		CCDEAD1DD2EABD4D3D8A622F /* Pods_E_HAUT.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 656B71857D118D708195C0D8 /* Pods_E_HAUT.framework */; };
 		F98B9D30229A530F0075E987 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F98B9D2F229A530F0075E987 /* AppDelegate.swift */; };
-		F98B9D32229A530F0075E987 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F98B9D31229A530F0075E987 /* ViewController.swift */; };
+		F98B9D32229A530F0075E987 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F98B9D31229A530F0075E987 /* LoginViewController.swift */; };
 		F98B9D35229A530F0075E987 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F98B9D33229A530F0075E987 /* Main.storyboard */; };
 		F98B9D37229A530F0075E987 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F98B9D36229A530F0075E987 /* Assets.xcassets */; };
 		F98B9D3A229A530F0075E987 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F98B9D38229A530F0075E987 /* LaunchScreen.storyboard */; };
 		F98B9D49229A66320075E987 /* Crypto.swift in Sources */ = {isa = PBXBuildFile; fileRef = F98B9D48229A66320075E987 /* Crypto.swift */; };
+		F98B9D61229AAEEF0075E987 /* AppPreferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = F98B9D60229AAEEF0075E987 /* AppPreferences.swift */; };
+		F98B9D63229AB0BC0075E987 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = F98B9D62229AB0BC0075E987 /* Network.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,12 +24,14 @@
 		656B71857D118D708195C0D8 /* Pods_E_HAUT.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_E_HAUT.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F98B9D2C229A530F0075E987 /* E-HAUT.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "E-HAUT.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F98B9D2F229A530F0075E987 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		F98B9D31229A530F0075E987 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		F98B9D31229A530F0075E987 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		F98B9D34229A530F0075E987 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F98B9D36229A530F0075E987 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F98B9D39229A530F0075E987 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F98B9D3B229A530F0075E987 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F98B9D48229A66320075E987 /* Crypto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Crypto.swift; sourceTree = "<group>"; };
+		F98B9D60229AAEEF0075E987 /* AppPreferences.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppPreferences.swift; sourceTree = "<group>"; };
+		F98B9D62229AB0BC0075E987 /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,7 +88,6 @@
 				F98B9D46229A65570075E987 /* View */,
 				F98B9D44229A65250075E987 /* Model */,
 				F98B9D43229A650E0075E987 /* Service */,
-				F98B9D31229A530F0075E987 /* ViewController.swift */,
 				F98B9D33229A530F0075E987 /* Main.storyboard */,
 				F98B9D2F229A530F0075E987 /* AppDelegate.swift */,
 				F98B9D36229A530F0075E987 /* Assets.xcassets */,
@@ -97,6 +100,7 @@
 		F98B9D43229A650E0075E987 /* Service */ = {
 			isa = PBXGroup;
 			children = (
+				F98B9D62229AB0BC0075E987 /* Network.swift */,
 				F98B9D48229A66320075E987 /* Crypto.swift */,
 			);
 			path = Service;
@@ -105,6 +109,7 @@
 		F98B9D44229A65250075E987 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				F98B9D60229AAEEF0075E987 /* AppPreferences.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -112,6 +117,7 @@
 		F98B9D46229A65570075E987 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				F98B9D31229A530F0075E987 /* LoginViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -238,8 +244,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F98B9D63229AB0BC0075E987 /* Network.swift in Sources */,
 				F98B9D49229A66320075E987 /* Crypto.swift in Sources */,
-				F98B9D32229A530F0075E987 /* ViewController.swift in Sources */,
+				F98B9D32229A530F0075E987 /* LoginViewController.swift in Sources */,
+				F98B9D61229AAEEF0075E987 /* AppPreferences.swift in Sources */,
 				F98B9D30229A530F0075E987 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -387,15 +395,18 @@
 			baseConfigurationReference = 2D5630D8B7184375FC246EB2 /* Pods-E-HAUT.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = HC35LSB57F;
 				INFOPLIST_FILE = "E-HAUT/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = cn.ehaut.srun3000;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -406,15 +417,18 @@
 			baseConfigurationReference = 1070A5A2CE9827571F2CBE73 /* Pods-E-HAUT.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = HC35LSB57F;
 				INFOPLIST_FILE = "E-HAUT/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = cn.ehaut.srun3000;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

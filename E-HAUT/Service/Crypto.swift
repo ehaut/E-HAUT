@@ -27,9 +27,9 @@ class Crypto {
         let key = Array(passwordKey)
         var i = 0
         for each in password {
-            var ki: Int = (each.asciiValue) ^ ((key[passwordKeyLength - i % passwordKeyLength - 1]).asciiValue)
-            var _l: Int = Int((ki & 0x0f) + 0x36)
-            var _h: Int = Int((ki >> 4 & 0x0f) + 0x63)
+            let ki: Int = (each.asciiValue) ^ ((key[passwordKeyLength - i % passwordKeyLength - 1]).asciiValue)
+            let _l: Int = Int((ki & 0x0f) + 0x36)
+            let _h: Int = Int((ki >> 4 & 0x0f) + 0x63)
             if(i % 2 == 0) {
                 passwd += _l.asciiToString + _h.asciiToString
             } else {
@@ -53,8 +53,7 @@ extension Character {
 }
 
 extension Int {
-    var asciiToString: String
-    {
+    var asciiToString: String {
         get {
             return String(UnicodeScalar(UInt8(self)))
         }

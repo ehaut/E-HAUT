@@ -6,7 +6,8 @@ target 'E-HAUT' do
   use_frameworks!
 
   # Pods for E-HAUT
-  pod 'Alamofire', '~> 5.0.0-beta.5'
+  pod 'Alamofire', '~> 4.8.2'
+  pod 'SkyFloatingLabelTextField', '~> 3.0'
   pod 'IQKeyboardManagerSwift'
 
 end
