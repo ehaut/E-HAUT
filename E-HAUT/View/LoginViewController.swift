@@ -145,7 +145,9 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     
     
     @IBAction func openServiceWebSite(_ sender: Any) {
-        let url = NSURL(string: "http://172.16.154.130:8800/")
+        let serviceUrl:String = ServerInfo.serviceServerAddr+":"+ServerInfo.serviceServerPort
+        //let url = NSURL(string: "http://172.16.154.130:8800/")
+        let url = NSURL(string:serviceUrl)
         let svc = SFSafariViewController(url: url! as URL)
         present(svc, animated: true, completion: nil)
     }

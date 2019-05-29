@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
-    <device id="retina6_5" orientation="portrait">
+    <device id="retina6_1" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -22,7 +22,7 @@
                                 <rect key="frame" x="0.0" y="752" width="414" height="60"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Powered by E-HAUT Team" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ai2-Wa-muf">
-                                        <rect key="frame" x="105.66666666666669" y="0.0" width="202.66666666666663" height="25"/>
+                                        <rect key="frame" x="105.5" y="0.0" width="203" height="25"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="25" id="OEG-Ot-uHp"/>
                                         </constraints>
@@ -31,7 +31,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="© Copyright 2019" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mEu-DU-89y">
-                                        <rect key="frame" x="139" y="35" width="136.33333333333337" height="25"/>
+                                        <rect key="frame" x="139" y="35" width="136.5" height="25"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="25" id="Y0N-t4-Rp9"/>
                                         </constraints>
@@ -42,7 +42,7 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="57q-KA-PeQ">
-                                <rect key="frame" x="0.0" y="405.66666666666669" width="414" height="95"/>
+                                <rect key="frame" x="0.0" y="405.5" width="414" height="95"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="254" verticalHuggingPriority="251" text="河南工业大学" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0l2-RQ-ZC2">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="40"/>
