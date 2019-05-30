@@ -9,9 +9,14 @@
 import UIKit
 import SafariServices
 
+
 class LogoutViewController: UIViewController,UITableViewDataSource,UITableViewDelegate{
     
+    static let logoutViewController:LogoutViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "logout") as! LogoutViewController
+    
     @IBOutlet weak var tableView: UITableView!
+    
+//    var tableView:UITableView?
     
     var lable:[String] = ["用户名","地    址","时    间","流    量"]
     var info:[String] = ["载入中...","载入中...","载入中...","载入中..."]
@@ -20,36 +25,50 @@ class LogoutViewController: UIViewController,UITableViewDataSource,UITableViewDe
     var timer:Timer?
     var time:Int = 0
     
+    
+    func getTableViews(of view: UIView) {
+        // 1. code here do something with view
+        for subview in view.subviews {
+            if(subview is UITableView) {
+                  tableView = subview as? UITableView
+                  //print(tableView)
+            }
+            //getTableViews(of: subview)
+        }
+    }
+    
+    
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(true)
         stopTimer()
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        var network = Network()
-        let status:Bool = network.getUserStatus()
-        //print(status)
-        //setDisplay()
-        //print(info[0])
         super.viewWillDisappear(true)
-        startTimer()
+        Network.getUserStatus()
     }
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        tableView.dataSource = self
-        tableView.delegate = self
-//        startTimer()
+        print(tableView)
+        tableView?.dataSource = self
+        tableView?.delegate = self
     }
    
     
     func setDisplay() {
+//        info[0]="201616000000"
+//        info[1]="255.255.255.255"
+//        info[3]="999.99 MB"
        info[0] = OnlineInfo.onlineUsername
        info[1] = OnlineInfo.onlineIp
        info[3] = OnlineInfo.usedData
        time = OnlineInfo.usedTime
-       //tableView.reloadData()
+       getTableViews(of: self.view)
+       print(tableView)
+       tableView!.reloadData()
+       startTimer()
     }
     
     
@@ -88,7 +107,6 @@ class LogoutViewController: UIViewController,UITableViewDataSource,UITableViewDe
                 userInfo: nil,
                 repeats: true)
         }
-        
     }
     
     @objc func refresh() {
@@ -99,12 +117,14 @@ class LogoutViewController: UIViewController,UITableViewDataSource,UITableViewDe
         //infoTest[2]=timeShow
         info[2]=timeShow
         let indexPath = NSIndexPath(row: 2, section: 0)
-        tableView.reloadRows(at: [indexPath as IndexPath], with: .none)
+        tableView?.reloadRows(at: [indexPath as IndexPath], with: .none)
         time = time + 1
     }
     
     @IBAction func openServiceWebSite(_ sender: Any) {
-        let url = NSURL(string: "http://172.16.154.130:8800/")
+        let serviceUrl:String = ServerInfo.serviceServerAddr+":"+ServerInfo.serviceServerPort
+        //let url = NSURL(string: "http://172.16.154.130:8800/")
+        let url = NSURL(string:serviceUrl)
         let svc = SFSafariViewController(url: url! as URL)
         present(svc, animated: true, completion: nil)
     }

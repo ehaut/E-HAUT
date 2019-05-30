@@ -14,7 +14,7 @@
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController storyboardIdentifier="login" id="BYZ-38-t0r" customClass="LoginViewController" customModule="E_HAUT" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                    <view key="view" contentMode="scaleToFill" restorationIdentifier="login" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -116,7 +116,7 @@
         <scene sceneID="l6n-Ze-51k">
             <objects>
                 <viewController storyboardIdentifier="logout" id="i8z-97-mZS" customClass="LogoutViewController" customModule="E_HAUT" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="gFC-k5-toK">
+                    <view key="view" contentMode="scaleToFill" restorationIdentifier="logout" id="gFC-k5-toK">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
