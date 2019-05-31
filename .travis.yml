@@ -10,7 +10,7 @@ env:
   - LC_CTYPE=en_US.UTF-8
   - LANG=en_US.UTF-8
   - WORKSPACE=E-HAUT.xcworkspace
-  - EXAMPLE_SCHEME="E—HAUT TEST"
+  - EXAMPLE_SCHEME="E—HAUT"
   matrix:
    
 
