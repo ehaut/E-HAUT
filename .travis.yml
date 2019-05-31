@@ -1,0 +1,26 @@
+language: swift
+os: osx
+osx_image: xcode10.2
+branches:
+  only:
+    - master
+cache: bundler
+env:
+  global:
+  - LC_CTYPE=en_US.UTF-8
+  - LANG=en_US.UTF-8
+  - WORKSPACE=E-HAUT.xcworkspace
+  matrix:
+   
+
+    - DESTINATION="OS=12.2,name=iPhone XS"        
+    - DESTINATION="OS=11.4,name=iPhone X"         
+    - DESTINATION="OS=10.3.1,name=iPhone 7 Plus"   
+    - DESTINATION="arch=x86_64"
+    
+script:
+  - set -o pipefail
+  - xcodebuild -version
+  - xcodebuild -showsdks
+
+
