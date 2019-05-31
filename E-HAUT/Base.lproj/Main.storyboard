@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="i8z-97-mZS">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_1" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -63,6 +63,7 @@
                                         <connections>
                                             <action selector="loginButtonPressed:" destination="BYZ-38-t0r" eventType="touchDown" id="hKi-H3-cf5"/>
                                             <action selector="loginButtonTouchUPInside:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tm5-Ao-6p5"/>
+                                            <action selector="logoutButtonPressed:" destination="pgA-af-Qo8" eventType="touchUpInside" id="orf-Rl-DPf"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MLM-AA-c1x">
@@ -109,6 +110,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <exit id="pgA-af-Qo8" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="137.68115942028987" y="138.61607142857142"/>
         </scene>
@@ -121,7 +123,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="Vd9-a8-CgS">
-                                <rect key="frame" x="57" y="573" width="300" height="95"/>
+                                <rect key="frame" x="57" y="553" width="300" height="95"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xSZ-9s-MbF">
                                         <rect key="frame" x="0.0" y="0.0" width="300" height="50"/>
@@ -136,6 +138,7 @@
                                         <connections>
                                             <action selector="loginButtonPressed:" destination="BYZ-38-t0r" eventType="touchDown" id="loU-iu-TWa"/>
                                             <action selector="loginButtonTouchUPInside:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VBd-GL-SNr"/>
+                                            <action selector="logoutButtonPressed:" destination="i8z-97-mZS" eventType="touchUpInside" id="HRs-Oq-LsN"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IzL-IT-lX5">
@@ -159,10 +162,10 @@
                                 </items>
                             </navigationBar>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="40" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="dIz-2l-un7">
-                                <rect key="frame" x="0.0" y="323" width="414" height="200"/>
+                                <rect key="frame" x="0.0" y="343" width="414" height="160"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="200" id="fgQ-Xs-sWV"/>
+                                    <constraint firstAttribute="height" constant="160" id="fgQ-Xs-sWV"/>
                                 </constraints>
                             </tableView>
                         </subviews>
@@ -185,7 +188,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="n5i-hQ-puY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1057.3660714285713" y="142.02898550724638"/>
+            <point key="canvasLocation" x="1056.5217391304348" y="141.96428571428569"/>
         </scene>
     </scenes>
 </document>

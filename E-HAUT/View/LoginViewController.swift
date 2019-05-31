@@ -9,6 +9,7 @@
 import UIKit
 import SkyFloatingLabelTextField
 import SafariServices
+import JGProgressHUD
 
 class LoginViewController: UIViewController, UITextFieldDelegate {
 
@@ -21,6 +22,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     var textFields: [SkyFloatingLabelTextField] = []
     var username:String?
     var password:String?
+    var logoutViewController:LogoutViewController?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,9 +36,49 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         }
         
         reloadConfig()
-    
+        
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        logoutViewController = storyboard.instantiateViewController(withIdentifier: "logout") as? LogoutViewController
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillDisappear(true)
+        if(pageInfo.isJump) { //跳转来的
+            if(pageInfo.isAutoJump) {
+                let hud = JGProgressHUD(style: .dark)
+                hud.textLabel.text =  "重新获取状态成功！"
+                hud.indicatorView = JGProgressHUDSuccessIndicatorView()
+                hud.show(in: self.view)
+                hud.dismiss(afterDelay: 3.0)
+            }
+            pageInfo.isAutoJump=false
+            pageInfo.isJump=false
+        } else if (!pageInfo.isJump) { //页面被载入
+            Network.getUserStatus() {
+                if(OnlineInfo.networkIsConnect && !OnlineInfo.isOnline) {
+                    //网络连接成功，且不在线，留在本页，提示获取状态成功
+                    let hud = JGProgressHUD(style: .dark)
+                    hud.textLabel.text =  "状态获取成功！"
+                    hud.indicatorView = JGProgressHUDSuccessIndicatorView()
+                    hud.show(in: self.view)
+                    hud.dismiss(afterDelay: 3.0)
+                } else if(!OnlineInfo.networkIsConnect) {
+                    //网络连接错误，留在本页，提示网络错误
+                    let hud = JGProgressHUD(style: .dark)
+                    hud.textLabel.text = "网络连接错误！"
+                    hud.indicatorView = JGProgressHUDErrorIndicatorView()
+                    hud.show(in: self.view)
+                    hud.dismiss(afterDelay: 3.0)
+                    self.dismiss(animated: true, completion: nil)
+                } else if (OnlineInfo.networkIsConnect && OnlineInfo.isOnline) {
+                    //网络连接成功，且在线，跳转到注销页
+                    self.present(self.logoutViewController!, animated: true, completion: nil)
+                    pageInfo.isAutoJump=true
+                    pageInfo.isJump=true
+                }
+            }
+        }
+    }
     
     func reloadConfig() {
         //See here:https://stackoverflow.com/a/49170429
@@ -51,9 +93,6 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         if password != nil {
             passwordTextField.text = password
         }
-        //TODO:Login
-
-        
     }
     
     
@@ -88,7 +127,12 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
             if (passwd != password) {
                 UserDefaults.standard.set(passwd,forKey: "password")
             }
-            
+            self.present(self.logoutViewController!, animated: true, completion: nil)
+            UserInfo.username = user!
+            UserInfo.password = passwd!
+            Network.login() {
+                
+            }
         }
     }
     

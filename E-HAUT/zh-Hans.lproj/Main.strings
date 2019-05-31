@@ -1,0 +1,24 @@
+
+/* Class = "UIButton"; normalTitle = "自服务"; ObjectID = "IzL-IT-lX5"; */
+"IzL-IT-lX5.normalTitle" = "自服务";
+
+/* Class = "UIButton"; normalTitle = "自服务"; ObjectID = "MLM-AA-c1x"; */
+"MLM-AA-c1x.normalTitle" = "自服务";
+
+/* Class = "UILabel"; text = "校园网登录器"; ObjectID = "kpC-6J-3DM"; */
+"kpC-6J-3DM.text" = "校园网登录器";
+
+/* Class = "UITextField"; placeholder = "密码"; ObjectID = "lLL-wb-kTV"; */
+"lLL-wb-kTV.placeholder" = "密码";
+
+/* Class = "UITextField"; placeholder = "用户名"; ObjectID = "lgJ-qU-JuR"; */
+"lgJ-qU-JuR.placeholder" = "用户名";
+
+/* Class = "UINavigationItem"; title = "您已在线"; ObjectID = "wbV-3r-KV3"; */
+"wbV-3r-KV3.title" = "您已在线";
+
+/* Class = "UIButton"; normalTitle = "登 录"; ObjectID = "wyr-2t-pT3"; */
+"wyr-2t-pT3.normalTitle" = "登 录";
+
+/* Class = "UIButton"; normalTitle = "注 销"; ObjectID = "xSZ-9s-MbF"; */
+"xSZ-9s-MbF.normalTitle" = "注 销";

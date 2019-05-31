@@ -7,8 +7,10 @@
 //
 
 import Foundation
+import Alamofire
 
 struct OnlineInfo {
+    static var networkIsConnect:Bool = false
     static var isOnline:Bool = false
     static var onlineIp:String = ""
     static var onlineUsername:String = ""
@@ -27,11 +29,34 @@ struct ServerInfo {
     static var macAddr:String = ""
     static var acid:String = "1"
     static var type:String = "3"
-    static var trop:String = "0"
+    static var drop:String = "0"
     static var pop:String = "1"
+    static var key:String = "1234567890"
 }
 
-//struct UserInfo {
-//    static var username:String = ""
-//    static var password:String = ""
-//}
+struct networkSet {
+    static let Manager: Alamofire.Session = {
+        let configuration = URLSessionConfiguration.default
+        configuration.timeoutIntervalForRequest = 3 //超时设置
+        return Alamofire.Session(configuration: configuration)
+    }()
+}
+
+struct UserInfo {
+    static var username:String = ""
+    static var password:String = ""
+}
+
+
+struct pageInfo {
+    static var isJump:Bool = false
+    static var isAutoJump:Bool = false
+}
+
+struct postResult {
+    static var networkIsConnect:Bool = false
+    static var result:String = ""
+    static var isLoginOK:Bool = false
+    static var isLogoutOK:Bool = false
+    static var isAcidError:Bool = false
+}

@@ -8,15 +8,11 @@
 
 import UIKit
 import SafariServices
+import JGProgressHUD
 
-
-class LogoutViewController: UIViewController,UITableViewDataSource,UITableViewDelegate{
-    
-    static let logoutViewController:LogoutViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "logout") as! LogoutViewController
-    
+class LogoutViewController: UIViewController,UITableViewDataSource,UITableViewDelegate {
     @IBOutlet weak var tableView: UITableView!
-    
-//    var tableView:UITableView?
+
     
     var lable:[String] = ["用户名","地    址","时    间","流    量"]
     var info:[String] = ["载入中...","载入中...","载入中...","载入中..."]
@@ -26,18 +22,6 @@ class LogoutViewController: UIViewController,UITableViewDataSource,UITableViewDe
     var time:Int = 0
     
     
-    func getTableViews(of view: UIView) {
-        // 1. code here do something with view
-        for subview in view.subviews {
-            if(subview is UITableView) {
-                  tableView = subview as? UITableView
-                  //print(tableView)
-            }
-            //getTableViews(of: subview)
-        }
-    }
-    
-    
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(true)
         stopTimer()
@@ -45,15 +29,52 @@ class LogoutViewController: UIViewController,UITableViewDataSource,UITableViewDe
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillDisappear(true)
-        Network.getUserStatus()
+        if(pageInfo.isJump) { //跳转来的
+            if(pageInfo.isAutoJump) {
+                let hud = JGProgressHUD(style: .dark)
+                hud.textLabel.text =  "获取状态成功！"
+                hud.indicatorView = JGProgressHUDSuccessIndicatorView()
+                hud.show(in: self.view)
+                hud.dismiss(afterDelay: 3.0)
+            }  
+            pageInfo.isAutoJump=false
+            pageInfo.isJump=false
+        } else if (!pageInfo.isJump) { //页面被载入
+            Network.getUserStatus() {
+                if(OnlineInfo.networkIsConnect && OnlineInfo.isOnline) {
+                    //网络连接成功，且在线，留在本页，提示重新获取状态成功
+                    let hud = JGProgressHUD(style: .dark)
+                    hud.textLabel.text =  "重新获取状态成功！"
+                    hud.indicatorView = JGProgressHUDSuccessIndicatorView()
+                    hud.show(in: self.view)
+                    hud.dismiss(afterDelay: 3.0)
+                } else if(!OnlineInfo.networkIsConnect) {
+                    //网络连接错误，提示网络错误，跳转到登陆页
+                    let hud = JGProgressHUD(style: .dark)
+                    hud.textLabel.text = "网络连接错误！"
+                    hud.indicatorView = JGProgressHUDErrorIndicatorView()
+                    hud.show(in: self.view)
+                    hud.dismiss(afterDelay: 3.0)
+                    self.dismiss(animated: true, completion: nil)
+                    pageInfo.isAutoJump=true
+                    pageInfo.isJump=true
+                } else if (OnlineInfo.networkIsConnect && !OnlineInfo.isOnline) {
+                    //网络连接成功，且不在线，跳转到登录页
+                    self.dismiss(animated: true, completion: nil)
+                    pageInfo.isAutoJump=true
+                    pageInfo.isJump=true
+                }
+            }
+        }
+        self.setDisplay()
+        startTimer()
     }
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        print(tableView)
-        tableView?.dataSource = self
-        tableView?.delegate = self
+        tableView.dataSource = self
+        tableView.delegate = self
     }
    
     
@@ -65,9 +86,7 @@ class LogoutViewController: UIViewController,UITableViewDataSource,UITableViewDe
        info[1] = OnlineInfo.onlineIp
        info[3] = OnlineInfo.usedData
        time = OnlineInfo.usedTime
-       getTableViews(of: self.view)
-       print(tableView)
-       tableView!.reloadData()
+       tableView.reloadData()
        startTimer()
     }
     
@@ -89,7 +108,7 @@ class LogoutViewController: UIViewController,UITableViewDataSource,UITableViewDe
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 50.0
+        return 40.0
     }
     
     func stopTimer() {
@@ -117,17 +136,32 @@ class LogoutViewController: UIViewController,UITableViewDataSource,UITableViewDe
         //infoTest[2]=timeShow
         info[2]=timeShow
         let indexPath = NSIndexPath(row: 2, section: 0)
-        tableView?.reloadRows(at: [indexPath as IndexPath], with: .none)
+        tableView.reloadRows(at: [indexPath as IndexPath], with: .none)
         time = time + 1
     }
     
     @IBAction func openServiceWebSite(_ sender: Any) {
-        let serviceUrl:String = ServerInfo.serviceServerAddr+":"+ServerInfo.serviceServerPort
+        var serviceUrl:String = ServerInfo.serviceServerAddr+":"+ServerInfo.serviceServerPort
         //let url = NSURL(string: "http://172.16.154.130:8800/")
+        let username:String = OnlineInfo.onlineUsername
+        if(!username.isEmpty) {
+            let data = username + ":" + username
+            let utf8EncodeData = data.data(using: String.Encoding.utf8, allowLossyConversion: true)
+            // 将NSData进行Base64编码
+            let base64String:String = (utf8EncodeData?.base64EncodedString(options: Data.Base64EncodingOptions(rawValue: UInt(0))))!
+            serviceUrl = serviceUrl + "/site/sso?data=" + base64String
+            //print("encodedString: \(serviceUrl)")
+        }
         let url = NSURL(string:serviceUrl)
         let svc = SFSafariViewController(url: url! as URL)
         present(svc, animated: true, completion: nil)
     }
     
+    @IBAction func logoutButtonPressed(_ sender: Any) {
+        Network.logout() {
+            
+        }
+        self.dismiss(animated: true, completion: nil)
+    }
 }
 
