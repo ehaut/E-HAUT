@@ -8,6 +8,9 @@ trigger:
 
 pool:
   vmImage: 'macos-latest'
+  
+- script: /usr/local/bin/pod install
+  displayName: 'pod install using a script'
 
 steps:
 - task: Xcode@5
@@ -18,3 +21,9 @@ steps:
     configuration: 'Release'
     xcWorkspacePath: '**/*.xcodeproj/project.xcworkspace'
     xcodeVersion: 'default' # Options: 8, 9, 10, default, specifyPath
+ 
+ - task: CocoaPods@0
+  inputs:
+    forceRepoUpdate: true
+    projectDirectory: '$(system.defaultWorkingDirectory)'
+  displayName: 'pod install using the CocoaPods task with a forced repo update and a custom project directory'
