@@ -183,6 +183,7 @@
                         <viewLayoutGuide key="safeArea" id="Jn9-qQ-Tut"/>
                     </view>
                     <connections>
+                        <outlet property="logoutButton" destination="xSZ-9s-MbF" id="3kT-pl-WqT"/>
                         <outlet property="tableView" destination="dIz-2l-un7" id="xZT-D3-WXr"/>
                     </connections>
                 </viewController>

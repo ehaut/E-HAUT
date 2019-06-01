@@ -13,7 +13,7 @@ class Network
 {
     static func getUserStatus(method: @escaping () -> ()) {
         //var networkIsConnect = false
-        let serverAddress = ServerInfo.authServerAddr + ":" + ServerInfo.authServerPort
+        let serverAddress = ServerInfo.authServerAddr //+ ":" + ServerInfo.authServerPort
         let url = serverAddress + "/cgi-bin/rad_user_info"
         let queue = DispatchQueue(label: "cn.ehut.response-queue", qos: .default, attributes: [.concurrent])
         networkSet.Manager.request(url).responseString(
@@ -132,7 +132,7 @@ class Network
                         }
                     }
                 case .failure(let error):
-                    OnlineInfo.networkIsConnect = false
+                    postResult.networkIsConnect = false
                     print(error)
                 }
                 DispatchQueue.main.async {

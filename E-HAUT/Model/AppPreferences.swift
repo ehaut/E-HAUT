@@ -35,10 +35,10 @@ struct ServerInfo {
 }
 
 struct networkSet {
-    static let Manager: Alamofire.Session = {
+    static let Manager: Alamofire.SessionManager = {
         let configuration = URLSessionConfiguration.default
-        configuration.timeoutIntervalForRequest = 3 //超时设置
-        return Alamofire.Session(configuration: configuration)
+        configuration.timeoutIntervalForRequest = 10 //超时设置
+        return Alamofire.SessionManager(configuration: configuration)
     }()
 }
 
@@ -47,11 +47,6 @@ struct UserInfo {
     static var password:String = ""
 }
 
-
-struct pageInfo {
-    static var isJump:Bool = false
-    static var isAutoJump:Bool = false
-}
 
 struct postResult {
     static var networkIsConnect:Bool = false

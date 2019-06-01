@@ -12,7 +12,7 @@ import JGProgressHUD
 
 class LogoutViewController: UIViewController,UITableViewDataSource,UITableViewDelegate {
     @IBOutlet weak var tableView: UITableView!
-
+    @IBOutlet weak var logoutButton: UIButton!
     
     var lable:[String] = ["用户名","地    址","时    间","流    量"]
     var info:[String] = ["载入中...","载入中...","载入中...","载入中..."]
@@ -20,6 +20,9 @@ class LogoutViewController: UIViewController,UITableViewDataSource,UITableViewDe
     
     var timer:Timer?
     var time:Int = 0
+    
+    let logoutLoading = JGProgressHUD(style: .dark)
+    //let getStatusLoading = JGProgressHUD(style: .dark)
     
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -29,45 +32,57 @@ class LogoutViewController: UIViewController,UITableViewDataSource,UITableViewDe
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillDisappear(true)
-        if(pageInfo.isJump) { //跳转来的
-            if(pageInfo.isAutoJump) {
-                let hud = JGProgressHUD(style: .dark)
-                hud.textLabel.text =  "获取状态成功！"
-                hud.indicatorView = JGProgressHUDSuccessIndicatorView()
-                hud.show(in: self.view)
-                hud.dismiss(afterDelay: 3.0)
-            }  
-            pageInfo.isAutoJump=false
-            pageInfo.isJump=false
-        } else if (!pageInfo.isJump) { //页面被载入
+        OnlineInfo.networkIsConnect = false
+        OnlineInfo.isOnline = false
+        if(postResult.isLoginOK) {
+            Network.getUserStatus(){
+                self.setDisplay()
+                self.startTimer()
+            }
+            let hud = JGProgressHUD(style: .dark)
+            hud.textLabel.text =  "登录成功！"
+            hud.indicatorView = JGProgressHUDSuccessIndicatorView()
+            hud.show(in: self.view)
+            hud.dismiss(afterDelay: 3.0)
+            postResult.isAcidError = false
+            postResult.isLoginOK = false
+            postResult.networkIsConnect = false
+            postResult.isLogoutOK = false
+            postResult.result = ""
+        } else {
             Network.getUserStatus() {
+                //self.getStatusLoading.textLabel.text="获取状态中..请稍后！"
+                //self.getStatusLoading.show(in: self.view)
                 if(OnlineInfo.networkIsConnect && OnlineInfo.isOnline) {
-                    //网络连接成功，且在线，留在本页，提示重新获取状态成功
+                    //self.getStatusLoading.dismiss() //网络连接成功，且在线，留在本页，提示重新获取状态成功
                     let hud = JGProgressHUD(style: .dark)
-                    hud.textLabel.text =  "重新获取状态成功！"
+                    hud.textLabel.text =  "获取状态成功！"
                     hud.indicatorView = JGProgressHUDSuccessIndicatorView()
                     hud.show(in: self.view)
                     hud.dismiss(afterDelay: 3.0)
+                    self.setDisplay()
+                    self.startTimer()
                 } else if(!OnlineInfo.networkIsConnect) {
                     //网络连接错误，提示网络错误，跳转到登陆页
+                    //self.getStatusLoading.dismiss()
                     let hud = JGProgressHUD(style: .dark)
                     hud.textLabel.text = "网络连接错误！"
                     hud.indicatorView = JGProgressHUDErrorIndicatorView()
                     hud.show(in: self.view)
                     hud.dismiss(afterDelay: 3.0)
                     self.dismiss(animated: true, completion: nil)
-                    pageInfo.isAutoJump=true
-                    pageInfo.isJump=true
                 } else if (OnlineInfo.networkIsConnect && !OnlineInfo.isOnline) {
                     //网络连接成功，且不在线，跳转到登录页
+                    //self.getStatusLoading.dismiss()
+                    let hud = JGProgressHUD(style: .dark)
+                    hud.textLabel.text =  "获取状态成功！"
+                    hud.indicatorView = JGProgressHUDSuccessIndicatorView()
+                    hud.show(in: self.view)
+                    hud.dismiss(afterDelay: 3.0)
                     self.dismiss(animated: true, completion: nil)
-                    pageInfo.isAutoJump=true
-                    pageInfo.isJump=true
                 }
             }
         }
-        self.setDisplay()
-        startTimer()
     }
     
     
@@ -158,10 +173,35 @@ class LogoutViewController: UIViewController,UITableViewDataSource,UITableViewDe
     }
     
     @IBAction func logoutButtonPressed(_ sender: Any) {
+        logoutLoading.textLabel.text = "注销中...请稍等！"
+        logoutLoading.show(in: self.view)
+        logoutButton.isEnabled = false
         Network.logout() {
-            
+            if(postResult.networkIsConnect) {
+                if(postResult.isLogoutOK)   {
+                    self.logoutLoading.dismiss()
+                    self.logoutButton.isEnabled = true
+                    self.dismiss(animated: true, completion: nil)
+                } else {
+                    self.logoutLoading.dismiss()
+                    let hud = JGProgressHUD(style: .dark)
+                    hud.textLabel.text = postResult.result
+                    hud.indicatorView = JGProgressHUDErrorIndicatorView()
+                    hud.show(in: self.view)
+                    hud.dismiss(afterDelay: 3.0)
+                    self.logoutButton.isEnabled = true
+                }
+            } else {
+                self.logoutLoading.dismiss()
+                let hud = JGProgressHUD(style: .dark)
+                hud.textLabel.text = "网络连接错误！"
+                hud.indicatorView = JGProgressHUDErrorIndicatorView()
+                hud.show(in: self.view)
+                hud.dismiss(afterDelay: 3.0)
+                self.logoutButton.isEnabled = true
+                self.dismiss(animated: true, completion: nil)
+            }
         }
-        self.dismiss(animated: true, completion: nil)
     }
 }
 
