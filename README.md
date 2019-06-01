@@ -3,7 +3,7 @@ An iOS App for Srun3k Client for HAUT
 
 河南工业大学校园网客户端 iOS 版
 
-适配 ** iOS9** 及以上系统
+适配 **iOS9** 及以上系统
 
 ![DEMO](demo.png)
 
