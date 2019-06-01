@@ -156,6 +156,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
                         }
                         UserDefaults.standard.set(ServerInfo.acid,forKey: "acid")
                         self.loginLoading.dismiss()
+                        self.loginButton.isEnabled = true
                         self.present(self.logoutViewController!, animated: true, completion: nil)
                     } else {
                         if(postResult.isAcidError) {
