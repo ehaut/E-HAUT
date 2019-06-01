@@ -127,8 +127,8 @@ class Network
                         postResult.isLogoutOK = true
                     } else {
                         postResult.isLogoutOK = false
-                        if(get.contains("login_error#INFO failed, BAS respond timeout.")) {
-                            postResult.isAcidError = true
+                        if(get.contains("You are not online.")) {
+                            postResult.isNotOnline = true
                         }
                     }
                 case .failure(let error):

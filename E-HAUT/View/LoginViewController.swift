@@ -58,6 +58,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
             postResult.isLoginOK = false
             postResult.networkIsConnect = false
             postResult.isLogoutOK = false
+            postResult.isNotOnline = false
             postResult.result = ""
         } else {
             //getStatusLoading.textLabel.text="获取状态中..请稍后！"

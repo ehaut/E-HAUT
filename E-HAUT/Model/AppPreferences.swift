@@ -54,4 +54,5 @@ struct postResult {
     static var isLoginOK:Bool = false
     static var isLogoutOK:Bool = false
     static var isAcidError:Bool = false
+    static var isNotOnline:Bool = false
 }

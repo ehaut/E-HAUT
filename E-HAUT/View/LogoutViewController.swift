@@ -48,6 +48,7 @@ class LogoutViewController: UIViewController,UITableViewDataSource,UITableViewDe
             postResult.isLoginOK = false
             postResult.networkIsConnect = false
             postResult.isLogoutOK = false
+            postResult.isNotOnline = true
             postResult.result = ""
         } else {
             Network.getUserStatus() {
@@ -183,13 +184,24 @@ class LogoutViewController: UIViewController,UITableViewDataSource,UITableViewDe
                     self.logoutButton.isEnabled = true
                     self.dismiss(animated: true, completion: nil)
                 } else {
-                    self.logoutLoading.dismiss()
-                    let hud = JGProgressHUD(style: .dark)
-                    hud.textLabel.text = postResult.result
-                    hud.indicatorView = JGProgressHUDErrorIndicatorView()
-                    hud.show(in: self.view)
-                    hud.dismiss(afterDelay: 3.0)
-                    self.logoutButton.isEnabled = true
+                    if(postResult.isNotOnline) {
+                        self.logoutLoading.dismiss()
+                        let hud = JGProgressHUD(style: .dark)
+                        hud.textLabel.text = "您不在线，无法注销！"
+                        hud.indicatorView = JGProgressHUDErrorIndicatorView()
+                        hud.show(in: self.view)
+                        hud.dismiss(afterDelay: 3.0)
+                        self.logoutButton.isEnabled = true
+                        self.dismiss(animated: true, completion: nil)
+                    } else {
+                        self.logoutLoading.dismiss()
+                        let hud = JGProgressHUD(style: .dark)
+                        hud.textLabel.text = postResult.result
+                        hud.indicatorView = JGProgressHUDErrorIndicatorView()
+                        hud.show(in: self.view)
+                        hud.dismiss(afterDelay: 3.0)
+                        self.logoutButton.isEnabled = true
+                    }
                 }
             } else {
                 self.logoutLoading.dismiss()
