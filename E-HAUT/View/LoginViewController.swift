@@ -78,7 +78,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
                     //网络连接错误，提示网络错误
                     //self.getStatusLoading.dismiss()
                     let hud = JGProgressHUD(style: .dark)
-                    hud.textLabel.text = "网络连接错误！"
+                    hud.textLabel.text = "无法连接到认证服务器！"
                     hud.indicatorView = JGProgressHUDErrorIndicatorView()
                     hud.show(in: self.view)
                     hud.dismiss(afterDelay: 3.0)
