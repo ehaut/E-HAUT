@@ -10,6 +10,7 @@ import UIKit
 import SkyFloatingLabelTextField
 import SafariServices
 import JGProgressHUD
+import CommonCrypto
 
 class LoginViewController: UIViewController, UITextFieldDelegate {
 
@@ -256,13 +257,55 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     
     
     @IBAction func openServiceWebSite(_ sender: Any) {
-        let serviceUrl:String = ServerInfo.serviceServerAddr+":"+ServerInfo.serviceServerPort
-        //let url = NSURL(string: "http://172.16.154.130:8800/")
-        let url = NSURL(string:serviceUrl)
-        let svc = SFSafariViewController(url: url! as URL)
-        present(svc, animated: true, completion: nil)
+        var serviceUrl:String = ServerInfo.serviceServerAddr+":"+ServerInfo.serviceServerPort
+        let username:String = usernameTextField.text!
+        let password:String = passwordTextField.text!
+        if(!username.isEmpty) {
+            if(!password.isEmpty) {
+                let data = username + ":" + password.md5()
+                let utf8EncodeData = data.data(using: String.Encoding.utf8, allowLossyConversion: true)
+                // 将NSData进行Base64编码
+                let base64String:String = (utf8EncodeData?.base64EncodedString(options: Data.Base64EncodingOptions(rawValue: UInt(0))))!
+                serviceUrl = serviceUrl + "/site/sso?data=" + base64String
+                let url = NSURL(string:serviceUrl)
+                let svc = SFSafariViewController(url: url! as URL)
+                present(svc, animated: true, completion: nil)
+            } else {
+                let alertController = UIAlertController(title: "提示",
+                                                        message: "输入密码以便登陆自服务", preferredStyle: .alert)
+                let okAction = UIAlertAction(title: "确定", style: .default, handler: nil)
+                alertController.addAction(okAction)
+                self.present(alertController, animated: true, completion: nil)
+                //let service = ServiceWebViewController()
+                //present(service, animated: true, completion: nil)
+            }
+        } else {
+            //let service = ServiceWebViewController()
+            //present(service, animated: true, completion: nil)
+            let alertController = UIAlertController(title: "提示",
+                                                    message: "输入用户名以便登陆自服务", preferredStyle: .alert)
+            let okAction = UIAlertAction(title: "确定", style: .default, handler: nil)
+            alertController.addAction(okAction)
+            self.present(alertController, animated: true, completion: nil)
+        }
     }
     
     
 }
 
+extension String {
+    func md5() -> String {
+        //See here:https://blog.csdn.net/PRESISTSI/article/details/82224809
+        let str = self.cString(using: String.Encoding.utf8)
+        let strLen = CUnsignedInt(self.lengthOfBytes(using: String.Encoding.utf8))
+        let digestLen = Int(CC_MD5_DIGEST_LENGTH)
+        let result = UnsafeMutablePointer<UInt8>.allocate(capacity: 16)
+        CC_MD5(str!, strLen, result)
+        let hash = NSMutableString()
+        for i in 0 ..< digestLen {
+            hash.appendFormat("%02x", result[i])
+        }
+        free(result)
+        return String(format: hash as String)
+    }
+}

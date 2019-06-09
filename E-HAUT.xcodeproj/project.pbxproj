@@ -16,6 +16,9 @@
 		F98B9D49229A66320075E987 /* Crypto.swift in Sources */ = {isa = PBXBuildFile; fileRef = F98B9D48229A66320075E987 /* Crypto.swift */; };
 		F98B9D61229AAEEF0075E987 /* AppPreferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = F98B9D60229AAEEF0075E987 /* AppPreferences.swift */; };
 		F98B9D63229AB0BC0075E987 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = F98B9D62229AB0BC0075E987 /* Network.swift */; };
+		F9A21A6122AD0ACD0090260E /* service.html in Resources */ = {isa = PBXBuildFile; fileRef = F9A21A6022AD0ACD0090260E /* service.html */; };
+		F9A21A6422AD0CD20090260E /* ServiceWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9A21A6322AD0CD20090260E /* ServiceWebViewController.swift */; };
+		F9A21A6622AD1F8E0090260E /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9A21A6522AD1F8E0090260E /* WebKit.framework */; };
 		F9FDE097229E0143002191AA /* LogoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9FDE096229E0143002191AA /* LogoutViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -33,6 +36,9 @@
 		F98B9D48229A66320075E987 /* Crypto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Crypto.swift; sourceTree = "<group>"; };
 		F98B9D60229AAEEF0075E987 /* AppPreferences.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppPreferences.swift; sourceTree = "<group>"; };
 		F98B9D62229AB0BC0075E987 /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
+		F9A21A6022AD0ACD0090260E /* service.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = service.html; sourceTree = "<group>"; };
+		F9A21A6322AD0CD20090260E /* ServiceWebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceWebViewController.swift; sourceTree = "<group>"; };
+		F9A21A6522AD1F8E0090260E /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		F9E4E98022A166720060696B /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
 		F9E4E98122A166720060696B /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
 		F9FDE096229E0143002191AA /* LogoutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoutViewController.swift; sourceTree = "<group>"; };
@@ -43,6 +49,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F9A21A6622AD1F8E0090260E /* WebKit.framework in Frameworks */,
 				CCDEAD1DD2EABD4D3D8A622F /* Pods_E_HAUT.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -53,6 +60,7 @@
 		1B9EA48CD446EE158E164855 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F9A21A6522AD1F8E0090260E /* WebKit.framework */,
 				656B71857D118D708195C0D8 /* Pods_E_HAUT.framework */,
 			);
 			name = Frameworks;
@@ -88,6 +96,7 @@
 		F98B9D2E229A530F0075E987 /* E-HAUT */ = {
 			isa = PBXGroup;
 			children = (
+				F9A21A6022AD0ACD0090260E /* service.html */,
 				F98B9D47229A65840075E987 /* Resources */,
 				F98B9D46229A65570075E987 /* View */,
 				F98B9D44229A65250075E987 /* Model */,
@@ -123,6 +132,7 @@
 			children = (
 				F98B9D31229A530F0075E987 /* LoginViewController.swift */,
 				F9FDE096229E0143002191AA /* LogoutViewController.swift */,
+				F9A21A6322AD0CD20090260E /* ServiceWebViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -195,6 +205,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F9A21A6122AD0ACD0090260E /* service.html in Resources */,
 				F98B9D3A229A530F0075E987 /* LaunchScreen.storyboard in Resources */,
 				F98B9D37229A530F0075E987 /* Assets.xcassets in Resources */,
 				F98B9D35229A530F0075E987 /* Main.storyboard in Resources */,
@@ -255,6 +266,7 @@
 				F98B9D32229A530F0075E987 /* LoginViewController.swift in Sources */,
 				F98B9D61229AAEEF0075E987 /* AppPreferences.swift in Sources */,
 				F9FDE097229E0143002191AA /* LogoutViewController.swift in Sources */,
+				F9A21A6422AD0CD20090260E /* ServiceWebViewController.swift in Sources */,
 				F98B9D30229A530F0075E987 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -410,7 +422,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = HC35LSB57F;
 				INFOPLIST_FILE = "E-HAUT/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -432,7 +444,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = HC35LSB57F;
 				INFOPLIST_FILE = "E-HAUT/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

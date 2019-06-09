@@ -95,15 +95,15 @@ class LogoutViewController: UIViewController,UITableViewDataSource,UITableViewDe
    
     
     func setDisplay() {
-//        info[0]="201616000000"
-//        info[1]="255.255.255.255"
-//        info[3]="999.99 MB"
-       info[0] = OnlineInfo.onlineUsername
-       info[1] = OnlineInfo.onlineIp
-       info[3] = OnlineInfo.usedData
-       time = OnlineInfo.usedTime
-       tableView.reloadData()
-       startTimer()
+//    info[0]="201616000000"
+//    info[1]="172.16.254.254"
+//    info[3]="999.99 MB"
+        info[0] = OnlineInfo.onlineUsername
+        info[1] = OnlineInfo.onlineIp
+        info[3] = OnlineInfo.usedData
+        time = OnlineInfo.usedTime
+        tableView.reloadData()
+        startTimer()
     }
     
     
