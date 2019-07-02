@@ -1,0 +1,4 @@
+github "Alamofire/Alamofire" ~>4.8
+github "radex/SwiftyUserDefaults" ~>4.0
+github "sindresorhus/Preferences" ~>0.4
+

@@ -1,0 +1,9 @@
+[submodule "Carthage/Checkouts/SwiftyUserDefaults"]
+	path = Carthage/Checkouts/SwiftyUserDefaults
+	url = https://github.com/radex/SwiftyUserDefaults.git
+[submodule "Carthage/Checkouts/Preferences"]
+	path = Carthage/Checkouts/Preferences
+	url = https://github.com/sindresorhus/Preferences.git
+[submodule "Carthage/Checkouts/Alamofire"]
+	path = Carthage/Checkouts/Alamofire
+	url = https://github.com/Alamofire/Alamofire.git

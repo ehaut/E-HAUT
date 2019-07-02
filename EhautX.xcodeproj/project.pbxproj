@@ -1,0 +1,654 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		FB1483A422CB898300449969 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB1483A322CB898300449969 /* AppDelegate.swift */; };
+		FB1483A622CB898300449969 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FB1483A522CB898300449969 /* Assets.xcassets */; };
+		FB1483A922CB898300449969 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = FB1483A722CB898300449969 /* MainMenu.xib */; };
+		FB1483B522CB898300449969 /* EhautXTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB1483B422CB898300449969 /* EhautXTests.swift */; };
+		FB1483C022CB898300449969 /* EhautXUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB1483BF22CB898300449969 /* EhautXUITests.swift */; };
+		FB1483D122CB8B9800449969 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB1483CE22CB8B9800449969 /* Alamofire.framework */; };
+		FB1483D222CB8B9800449969 /* Preferences.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB1483CF22CB8B9800449969 /* Preferences.framework */; };
+		FB1483D322CB8B9800449969 /* SwiftyUserDefaults.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB1483D022CB8B9800449969 /* SwiftyUserDefaults.framework */; };
+		FB1483D822CBA20200449969 /* GeneralPrefsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB1483D622CBA20200449969 /* GeneralPrefsViewController.swift */; };
+		FB1483D922CBA20200449969 /* GeneralPrefsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FB1483D722CBA20200449969 /* GeneralPrefsViewController.xib */; };
+		FB1483E022CBA82200449969 /* AdvancedPrefsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB1483DE22CBA82200449969 /* AdvancedPrefsViewController.swift */; };
+		FB1483E122CBA82200449969 /* AdvancedPrefsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FB1483DF22CBA82200449969 /* AdvancedPrefsViewController.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		FB1483B122CB898300449969 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FB14839822CB898300449969 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FB14839F22CB898300449969;
+			remoteInfo = EhautX;
+		};
+		FB1483BC22CB898300449969 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FB14839822CB898300449969 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FB14839F22CB898300449969;
+			remoteInfo = EhautX;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		FB1483A022CB898300449969 /* EhautX.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EhautX.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FB1483A322CB898300449969 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		FB1483A522CB898300449969 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		FB1483A822CB898300449969 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		FB1483AA22CB898300449969 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FB1483AB22CB898300449969 /* EhautX.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = EhautX.entitlements; sourceTree = "<group>"; };
+		FB1483B022CB898300449969 /* EhautXTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EhautXTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FB1483B422CB898300449969 /* EhautXTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EhautXTests.swift; sourceTree = "<group>"; };
+		FB1483B622CB898300449969 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FB1483BB22CB898300449969 /* EhautXUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EhautXUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FB1483BF22CB898300449969 /* EhautXUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EhautXUITests.swift; sourceTree = "<group>"; };
+		FB1483C122CB898300449969 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FB1483CE22CB8B9800449969 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/Mac/Alamofire.framework; sourceTree = "<group>"; };
+		FB1483CF22CB8B9800449969 /* Preferences.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Preferences.framework; path = Carthage/Build/Mac/Preferences.framework; sourceTree = "<group>"; };
+		FB1483D022CB8B9800449969 /* SwiftyUserDefaults.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyUserDefaults.framework; path = Carthage/Build/Mac/SwiftyUserDefaults.framework; sourceTree = "<group>"; };
+		FB1483D622CBA20200449969 /* GeneralPrefsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralPrefsViewController.swift; sourceTree = "<group>"; };
+		FB1483D722CBA20200449969 /* GeneralPrefsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GeneralPrefsViewController.xib; sourceTree = "<group>"; };
+		FB1483DE22CBA82200449969 /* AdvancedPrefsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdvancedPrefsViewController.swift; sourceTree = "<group>"; };
+		FB1483DF22CBA82200449969 /* AdvancedPrefsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AdvancedPrefsViewController.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FB14839D22CB898300449969 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FB1483D122CB8B9800449969 /* Alamofire.framework in Frameworks */,
+				FB1483D222CB8B9800449969 /* Preferences.framework in Frameworks */,
+				FB1483D322CB8B9800449969 /* SwiftyUserDefaults.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FB1483AD22CB898300449969 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FB1483B822CB898300449969 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		FB14839722CB898300449969 = {
+			isa = PBXGroup;
+			children = (
+				FB1483A222CB898300449969 /* EhautX */,
+				FB1483B322CB898300449969 /* EhautXTests */,
+				FB1483BE22CB898300449969 /* EhautXUITests */,
+				FB1483A122CB898300449969 /* Products */,
+				FB1483CD22CB8B9800449969 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		FB1483A122CB898300449969 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FB1483A022CB898300449969 /* EhautX.app */,
+				FB1483B022CB898300449969 /* EhautXTests.xctest */,
+				FB1483BB22CB898300449969 /* EhautXUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FB1483A222CB898300449969 /* EhautX */ = {
+			isa = PBXGroup;
+			children = (
+				FB1483D522CBA1D800449969 /* Views */,
+				FB1483A322CB898300449969 /* AppDelegate.swift */,
+				FB1483A522CB898300449969 /* Assets.xcassets */,
+				FB1483A722CB898300449969 /* MainMenu.xib */,
+				FB1483AA22CB898300449969 /* Info.plist */,
+				FB1483AB22CB898300449969 /* EhautX.entitlements */,
+			);
+			path = EhautX;
+			sourceTree = "<group>";
+		};
+		FB1483B322CB898300449969 /* EhautXTests */ = {
+			isa = PBXGroup;
+			children = (
+				FB1483B422CB898300449969 /* EhautXTests.swift */,
+				FB1483B622CB898300449969 /* Info.plist */,
+			);
+			path = EhautXTests;
+			sourceTree = "<group>";
+		};
+		FB1483BE22CB898300449969 /* EhautXUITests */ = {
+			isa = PBXGroup;
+			children = (
+				FB1483BF22CB898300449969 /* EhautXUITests.swift */,
+				FB1483C122CB898300449969 /* Info.plist */,
+			);
+			path = EhautXUITests;
+			sourceTree = "<group>";
+		};
+		FB1483CD22CB8B9800449969 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FB1483CE22CB8B9800449969 /* Alamofire.framework */,
+				FB1483CF22CB8B9800449969 /* Preferences.framework */,
+				FB1483D022CB8B9800449969 /* SwiftyUserDefaults.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FB1483D522CBA1D800449969 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				FB1483D622CBA20200449969 /* GeneralPrefsViewController.swift */,
+				FB1483D722CBA20200449969 /* GeneralPrefsViewController.xib */,
+				FB1483DE22CBA82200449969 /* AdvancedPrefsViewController.swift */,
+				FB1483DF22CBA82200449969 /* AdvancedPrefsViewController.xib */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		FB14839F22CB898300449969 /* EhautX */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FB1483C422CB898300449969 /* Build configuration list for PBXNativeTarget "EhautX" */;
+			buildPhases = (
+				FB14839C22CB898300449969 /* Sources */,
+				FB14839D22CB898300449969 /* Frameworks */,
+				FB14839E22CB898300449969 /* Resources */,
+				FB1483D422CB8BA000449969 /* Run Script */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = EhautX;
+			productName = EhautX;
+			productReference = FB1483A022CB898300449969 /* EhautX.app */;
+			productType = "com.apple.product-type.application";
+		};
+		FB1483AF22CB898300449969 /* EhautXTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FB1483C722CB898300449969 /* Build configuration list for PBXNativeTarget "EhautXTests" */;
+			buildPhases = (
+				FB1483AC22CB898300449969 /* Sources */,
+				FB1483AD22CB898300449969 /* Frameworks */,
+				FB1483AE22CB898300449969 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FB1483B222CB898300449969 /* PBXTargetDependency */,
+			);
+			name = EhautXTests;
+			productName = EhautXTests;
+			productReference = FB1483B022CB898300449969 /* EhautXTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		FB1483BA22CB898300449969 /* EhautXUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FB1483CA22CB898300449969 /* Build configuration list for PBXNativeTarget "EhautXUITests" */;
+			buildPhases = (
+				FB1483B722CB898300449969 /* Sources */,
+				FB1483B822CB898300449969 /* Frameworks */,
+				FB1483B922CB898300449969 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FB1483BD22CB898300449969 /* PBXTargetDependency */,
+			);
+			name = EhautXUITests;
+			productName = EhautXUITests;
+			productReference = FB1483BB22CB898300449969 /* EhautXUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FB14839822CB898300449969 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1020;
+				LastUpgradeCheck = 1020;
+				ORGANIZATIONNAME = "Ehaut Team";
+				TargetAttributes = {
+					FB14839F22CB898300449969 = {
+						CreatedOnToolsVersion = 10.2.1;
+					};
+					FB1483AF22CB898300449969 = {
+						CreatedOnToolsVersion = 10.2.1;
+						TestTargetID = FB14839F22CB898300449969;
+					};
+					FB1483BA22CB898300449969 = {
+						CreatedOnToolsVersion = 10.2.1;
+						TestTargetID = FB14839F22CB898300449969;
+					};
+				};
+			};
+			buildConfigurationList = FB14839B22CB898300449969 /* Build configuration list for PBXProject "EhautX" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = FB14839722CB898300449969;
+			productRefGroup = FB1483A122CB898300449969 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FB14839F22CB898300449969 /* EhautX */,
+				FB1483AF22CB898300449969 /* EhautXTests */,
+				FB1483BA22CB898300449969 /* EhautXUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		FB14839E22CB898300449969 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FB1483D922CBA20200449969 /* GeneralPrefsViewController.xib in Resources */,
+				FB1483E122CBA82200449969 /* AdvancedPrefsViewController.xib in Resources */,
+				FB1483A622CB898300449969 /* Assets.xcassets in Resources */,
+				FB1483A922CB898300449969 /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FB1483AE22CB898300449969 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FB1483B922CB898300449969 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		FB1483D422CB8BA000449969 /* Run Script */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"$(SRCROOT)/input.xcfilelist",
+			);
+			inputPaths = (
+			);
+			name = "Run Script";
+			outputFileListPaths = (
+				"$(SRCROOT)/output.xcfilelist",
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FB14839C22CB898300449969 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FB1483D822CBA20200449969 /* GeneralPrefsViewController.swift in Sources */,
+				FB1483E022CBA82200449969 /* AdvancedPrefsViewController.swift in Sources */,
+				FB1483A422CB898300449969 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FB1483AC22CB898300449969 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FB1483B522CB898300449969 /* EhautXTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FB1483B722CB898300449969 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FB1483C022CB898300449969 /* EhautXUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		FB1483B222CB898300449969 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FB14839F22CB898300449969 /* EhautX */;
+			targetProxy = FB1483B122CB898300449969 /* PBXContainerItemProxy */;
+		};
+		FB1483BD22CB898300449969 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FB14839F22CB898300449969 /* EhautX */;
+			targetProxy = FB1483BC22CB898300449969 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		FB1483A722CB898300449969 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FB1483A822CB898300449969 /* Base */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		FB1483C222CB898300449969 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		FB1483C322CB898300449969 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		FB1483C522CB898300449969 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = EhautX;
+				CODE_SIGN_ENTITLEMENTS = EhautX/EhautX.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = GC96FM2SBJ;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/Mac",
+				);
+				INFOPLIST_FILE = EhautX/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = cn.ehaut.EhautX;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		FB1483C622CB898300449969 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = EhautX;
+				CODE_SIGN_ENTITLEMENTS = EhautX/EhautX.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = GC96FM2SBJ;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/Mac",
+				);
+				INFOPLIST_FILE = EhautX/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = cn.ehaut.EhautX;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		FB1483C822CB898300449969 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = GC96FM2SBJ;
+				INFOPLIST_FILE = EhautXTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = cn.ehaut.EhautXTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/EhautX.app/Contents/MacOS/EhautX";
+			};
+			name = Debug;
+		};
+		FB1483C922CB898300449969 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = GC96FM2SBJ;
+				INFOPLIST_FILE = EhautXTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = cn.ehaut.EhautXTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/EhautX.app/Contents/MacOS/EhautX";
+			};
+			name = Release;
+		};
+		FB1483CB22CB898300449969 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = GC96FM2SBJ;
+				INFOPLIST_FILE = EhautXUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = cn.ehaut.EhautXUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = EhautX;
+			};
+			name = Debug;
+		};
+		FB1483CC22CB898300449969 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = GC96FM2SBJ;
+				INFOPLIST_FILE = EhautXUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = cn.ehaut.EhautXUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = EhautX;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FB14839B22CB898300449969 /* Build configuration list for PBXProject "EhautX" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FB1483C222CB898300449969 /* Debug */,
+				FB1483C322CB898300449969 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FB1483C422CB898300449969 /* Build configuration list for PBXNativeTarget "EhautX" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FB1483C522CB898300449969 /* Debug */,
+				FB1483C622CB898300449969 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FB1483C722CB898300449969 /* Build configuration list for PBXNativeTarget "EhautXTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FB1483C822CB898300449969 /* Debug */,
+				FB1483C922CB898300449969 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FB1483CA22CB898300449969 /* Build configuration list for PBXNativeTarget "EhautXUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FB1483CB22CB898300449969 /* Debug */,
+				FB1483CC22CB898300449969 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = FB14839822CB898300449969 /* Project object */;
+}
