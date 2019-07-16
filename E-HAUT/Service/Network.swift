@@ -11,6 +11,62 @@ import Alamofire
 
 class Network
 {
+    
+    static func isNetworkReachability() {
+        
+        networkSet.testNetworkManger?.listener = { status in
+            if networkSet.testNetworkManger?.isReachable ?? false {
+                switch status{
+                case .notReachable:
+                    print("无法连接模拟认证服务器")
+                    TestServerInfo.testServerStatus = -1
+                    break
+                case .unknown:
+                    print("无法确定连接模拟认证服务器的状态")
+                    TestServerInfo.testServerStatus = -1
+                    break
+                case .reachable(.ethernetOrWiFi):
+                    print("通过WiFi连接模拟认证服务服务器成功")
+                    TestServerInfo.testServerStatus = 0
+                    break
+                case .reachable(.wwan):
+                    print("通过移动网络连接模拟认证服务器成功")
+                    TestServerInfo.testServerStatus = 1
+                    break
+                }
+            } else {
+                print("无法连接模拟认证服务器")
+                TestServerInfo.testServerStatus = -1
+            }
+        }
+        networkSet.authNetworkManger?.listener = { status in
+            if networkSet.authNetworkManger?.isReachable ?? false {
+                switch status{
+                case .notReachable:
+                    print("无法连接认证服务器")
+                    TestServerInfo.authServerStatus = -1
+                    break
+                case .unknown:
+                    print("无法确定连接认证服务器的状态")
+                    TestServerInfo.authServerStatus = -1
+                    break
+                case .reachable(.ethernetOrWiFi):
+                    print("通过WiFi连接认证服务服务器成功")
+                    TestServerInfo.authServerStatus = 0
+                    break
+                case .reachable(.wwan):
+                    //应该没有这种情况。
+                    print("通过移动网络连接认证服务器成功")
+                    TestServerInfo.authServerStatus = 1
+                    break
+                }
+            } else {
+                print("无法连接认证服务器")
+                TestServerInfo.authServerStatus = -1
+            }
+        }
+    }
+    
     static func getUserStatus(method: @escaping () -> ()) {
         //var networkIsConnect = false
         let serverAddress = ServerInfo.authServerAddr //+ ":" + ServerInfo.authServerPort
@@ -56,6 +112,28 @@ class Network
             }
         )
     }
+    
+    
+    static func getTestMode(method: @escaping () -> ()) {
+        let url = TestServerInfo.environmentalFile
+        let queue = DispatchQueue(label: "cn.ehut.response-queue", qos: .default, attributes: [.concurrent])
+        networkSet.Manager.request(url).responseString(
+            queue:queue,
+            completionHandler: { response in
+                    switch(response.result) {
+                    case .success(let get):
+                        print(get)
+                    case .failure(let error):
+                        //OnlineInfo.networkIsConnect = false
+                        print(error)
+                    DispatchQueue.main.async {
+                        method()
+                    }
+                }
+            }
+        )
+    }
+    
     static func login(method: @escaping () -> ()) {
         let serverAddress = ServerInfo.authServerAddr + ":" + ServerInfo.authServerPort
         let url = serverAddress + "/cgi-bin/srun_portal"

@@ -43,10 +43,24 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         logoutViewController = storyboard.instantiateViewController(withIdentifier: "logout") as? LogoutViewController
+        networkSet.testNetworkManger?.startListening()
+        networkSet.authNetworkManger?.startListening()
     }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(true)
+        networkSet.testNetworkManger?.stopListening()
+        networkSet.authNetworkManger?.stopListening()
+    }
+    
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillDisappear(true)
+        
+        Network.getTestMode() {
+            
+        }
+        
         OnlineInfo.networkIsConnect = false
         OnlineInfo.isOnline = false
         if(postResult.isLogoutOK) {

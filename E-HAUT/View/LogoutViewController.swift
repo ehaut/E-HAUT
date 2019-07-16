@@ -28,6 +28,8 @@ class LogoutViewController: UIViewController,UITableViewDataSource,UITableViewDe
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(true)
         stopTimer()
+        networkSet.testNetworkManger?.stopListening()
+        networkSet.authNetworkManger?.stopListening()
     }
     
     override func viewWillAppear(_ animated: Bool) {
