@@ -36,12 +36,16 @@ struct ServerInfo {
 
 
 struct TestServerInfo {
-    static var testServerAddr:String = "http://cgi.ehaut.cn"
-    static var environmentalFile:String = "http://cgi.ehaut.cn/env.txt"
+    //fake cgi server
+    static var testServerAddr:String = "https://cgi.ehaut.cn"
+    static var testModeAddr:String = "https://cgi.ehaut.cn/testmode"
+    //static var environmentalFile:String = "https://cgi.ehaut.cn/env.json"
     //不要编辑以下部分
     static var testServerStatus:Int = -1
     static var authServerStatus:Int = -1
-    static var isTestModeOn = true 
+    static var isTestModeOn = true
+    static var isCgiBroken = false
+    static var isNetworkConnect = false
 }
 
 
@@ -52,9 +56,9 @@ struct networkSet {
         return Alamofire.SessionManager(configuration: configuration)
     }()
     static var testServerAddr:String = TestServerInfo.testServerAddr
-    static let testNetworkManger = NetworkReachabilityManager(host: testServerAddr)
+    //static let testNetworkManger = Alamofire.NetworkReachabilityManager(host: testServerAddr)
     static var authServerAddr:String = ServerInfo.authServerAddr
-    static let authNetworkManger = NetworkReachabilityManager(host: authServerAddr)
+    //static let authNetworkManger = Alamofire.NetworkReachabilityManager(host: authServerAddr)
 }
 
 

@@ -106,6 +106,7 @@
                     <connections>
                         <outlet property="loginButton" destination="wyr-2t-pT3" id="pAw-zA-DVx"/>
                         <outlet property="passwordTextField" destination="lLL-wb-kTV" id="sAo-Xm-8Z5"/>
+                        <outlet property="serviceButtonInLoginPage" destination="MLM-AA-c1x" id="pC7-JM-Akm"/>
                         <outlet property="usernameTextField" destination="lgJ-qU-JuR" id="Inx-Lx-awx"/>
                     </connections>
                 </viewController>
@@ -184,6 +185,7 @@
                     </view>
                     <connections>
                         <outlet property="logoutButton" destination="xSZ-9s-MbF" id="3kT-pl-WqT"/>
+                        <outlet property="serviceButtonInLogoutPage" destination="IzL-IT-lX5" id="UWI-r5-c4f"/>
                         <outlet property="tableView" destination="dIz-2l-un7" id="xZT-D3-WXr"/>
                     </connections>
                 </viewController>
