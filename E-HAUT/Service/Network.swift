@@ -222,9 +222,15 @@ class Network
             url =  serverAddress + "/cgi-bin/srun_portal"
         }
         let queue = DispatchQueue(label: "cn.ehut.response-queue", qos: .default, attributes: [.concurrent])
+        var username:String=""
+        if(TestServerInfo.isTestModeOn==true) {
+            username=UserInfo.username
+        } else {
+            username=Crypto.usernameEncrypt(username: UserInfo.username)
+        }
         let parameters: Parameters = [
             "action":"login",
-            "username":Crypto.usernameEncrypt(username: UserInfo.username),
+            "username":username,
             "password":Crypto.passwordEncrypt(password: UserInfo.password, passwordKey:ServerInfo.key),
             "mac":ServerInfo.macAddr,
             "ac_id":ServerInfo.acid,

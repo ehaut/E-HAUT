@@ -73,7 +73,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
             postResult.isLogoutOK = false
             postResult.isNotOnline = false
             postResult.result = ""
-            TestServerInfo.isTestModeOn=false
+            //TestServerInfo.isTestModeOn=false
         } else {
             Network.getTestMode() {
                 if(TestServerInfo.isTestModeOn==true) {
