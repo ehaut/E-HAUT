@@ -20,6 +20,8 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var loginButton: UIButton!
     //@IBOutlet weak var serviceButton: UIButton!
     
+    @IBOutlet weak var serviceButtonInLoginPage: UIButton!
+    
     var textFields: [SkyFloatingLabelTextField] = []
     var username:String?
     var password:String?
@@ -43,12 +45,22 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         logoutViewController = storyboard.instantiateViewController(withIdentifier: "logout") as? LogoutViewController
+       
     }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(true)
+    }
+    
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillDisappear(true)
+        
         OnlineInfo.networkIsConnect = false
         OnlineInfo.isOnline = false
+        TestServerInfo.isCgiBroken = false
+        TestServerInfo.isTestModeOn = true
+        TestServerInfo.isNetworkConnect = false
         if(postResult.isLogoutOK) {
             let hud = JGProgressHUD(style: .dark)
             hud.textLabel.text =  "注销成功！"
@@ -61,9 +73,15 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
             postResult.isLogoutOK = false
             postResult.isNotOnline = false
             postResult.result = ""
+            //TestServerInfo.isTestModeOn=false
         } else {
-            //getStatusLoading.textLabel.text="获取状态中..请稍后！"
-            //getStatusLoading.show(in: self.view)
+            Network.getTestMode() {
+                if(TestServerInfo.isTestModeOn==true) {
+                    self.serviceButtonInLoginPage.isHidden = true
+                } else {
+                    self.serviceButtonInLoginPage.isHidden = false
+                }
+            }
             Network.getUserStatus() {
                 if(OnlineInfo.networkIsConnect && OnlineInfo.isOnline) {
                     //网络连接成功，且在线，跳转到注销页

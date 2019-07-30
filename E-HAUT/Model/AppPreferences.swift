@@ -34,13 +34,33 @@ struct ServerInfo {
     static var key:String = "1234567890"
 }
 
+
+struct TestServerInfo {
+    //fake cgi server
+    static var testServerAddr:String = "https://cgi.ehaut.cn"
+    static var testModeAddr:String = "https://cgi.ehaut.cn/testmode"
+    //static var environmentalFile:String = "https://cgi.ehaut.cn/env.json"
+    //不要编辑以下部分
+    static var testServerStatus:Int = -1
+    static var authServerStatus:Int = -1
+    static var isTestModeOn = true
+    static var isCgiBroken = false
+    static var isNetworkConnect = false
+}
+
+
 struct networkSet {
     static let Manager: Alamofire.SessionManager = {
         let configuration = URLSessionConfiguration.default
         configuration.timeoutIntervalForRequest = 10 //超时设置
         return Alamofire.SessionManager(configuration: configuration)
     }()
+    static var testServerAddr:String = TestServerInfo.testServerAddr
+    //static let testNetworkManger = Alamofire.NetworkReachabilityManager(host: testServerAddr)
+    static var authServerAddr:String = ServerInfo.authServerAddr
+    //static let authNetworkManger = Alamofire.NetworkReachabilityManager(host: authServerAddr)
 }
+
 
 struct UserInfo {
     static var username:String = ""

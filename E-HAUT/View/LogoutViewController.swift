@@ -13,7 +13,7 @@ import JGProgressHUD
 class LogoutViewController: UIViewController,UITableViewDataSource,UITableViewDelegate {
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var logoutButton: UIButton!
-    
+    @IBOutlet weak var serviceButtonInLogoutPage: UIButton!
     var lable:[String] = ["用户名","地    址","时    间","流    量"]
     var info:[String] = ["载入中...","载入中...","载入中...","载入中..."]
     //var infoTest:[String] = ["201616000000","255.255.255.255","0 小时 0 分 0 秒","99.999 GB"]
@@ -32,6 +32,11 @@ class LogoutViewController: UIViewController,UITableViewDataSource,UITableViewDe
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillDisappear(true)
+        if(TestServerInfo.isTestModeOn==true) {
+            self.serviceButtonInLogoutPage.isHidden = true
+        } else {
+            self.serviceButtonInLogoutPage.isHidden = false
+        }
         OnlineInfo.networkIsConnect = false
         OnlineInfo.isOnline = false
         if(postResult.isLoginOK) {
