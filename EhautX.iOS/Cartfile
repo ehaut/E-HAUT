@@ -1,0 +1,5 @@
+github "Alamofire/Alamofire" ~>4.8
+github "Skyscanner/SkyFloatingLabelTextField" ~>3.0
+github "hackiftekhar/IQKeyboardManager" ~>6.4
+github "JonasGessner/JGProgressHUD" ~>2.0
+

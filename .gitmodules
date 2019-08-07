@@ -1,9 +1,27 @@
+[submodule "EhautX.macOS/Carthage/Checkouts/SwiftyUserDefaults"]
+	path = EhautX.macOS/Carthage/Checkouts/SwiftyUserDefaults
+	url = https://github.com/radex/SwiftyUserDefaults.git
+[submodule "EhautX.macOS/Carthage/Checkouts/Preferences"]
+	path = EhautX.macOS/Carthage/Checkouts/Preferences
+	url = https://github.com/sindresorhus/Preferences.git
+[submodule "EhautX.macOS/Carthage/Checkouts/Alamofire"]
+	path = EhautX.macOS/Carthage/Checkouts/Alamofire
+	url = https://github.com/Alamofire/Alamofire.git
 [submodule "Carthage/Checkouts/SwiftyUserDefaults"]
-	path = Carthage/Checkouts/SwiftyUserDefaults
+	path = EhautX.macOS/Carthage/Checkouts/SwiftyUserDefaults
 	url = https://github.com/radex/SwiftyUserDefaults.git
 [submodule "Carthage/Checkouts/Preferences"]
-	path = Carthage/Checkouts/Preferences
+	path = EhautX.macOS/Carthage/Checkouts/Preferences
 	url = https://github.com/sindresorhus/Preferences.git
 [submodule "Carthage/Checkouts/Alamofire"]
-	path = Carthage/Checkouts/Alamofire
+	path = EhautX.iOS/Carthage/Checkouts/Alamofire
 	url = https://github.com/Alamofire/Alamofire.git
+[submodule "Carthage/Checkouts/JGProgressHUD"]
+	path = EhautX.iOS/Carthage/Checkouts/JGProgressHUD
+	url = https://github.com/JonasGessner/JGProgressHUD.git
+[submodule "Carthage/Checkouts/SkyFloatingLabelTextField"]
+	path = EhautX.iOS/Carthage/Checkouts/SkyFloatingLabelTextField
+	url = https://github.com/Skyscanner/SkyFloatingLabelTextField.git
+[submodule "Carthage/Checkouts/IQKeyboardManager"]
+	path = EhautX.iOS/Carthage/Checkouts/IQKeyboardManager
+	url = https://github.com/hackiftekhar/IQKeyboardManager.git
