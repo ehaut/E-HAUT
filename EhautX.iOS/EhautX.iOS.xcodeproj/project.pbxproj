@@ -18,6 +18,10 @@
 		FB1E5EBF22FAD51100A42A92 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB1E5EBB22FAD51100A42A92 /* Alamofire.framework */; };
 		FB1E5EC022FAD51100A42A92 /* IQKeyboardManagerSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB1E5EBC22FAD51100A42A92 /* IQKeyboardManagerSwift.framework */; };
 		FB1E5EC122FAD51100A42A92 /* JGProgressHUD.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB1E5EBD22FAD51100A42A92 /* JGProgressHUD.framework */; };
+		FBDA2467230594D30004F64E /* AppPreferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBDA2466230594D30004F64E /* AppPreferences.swift */; };
+		FBDA2469230595210004F64E /* Crypto.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBDA2468230595210004F64E /* Crypto.swift */; };
+		FBDA246B2305954F0004F64E /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBDA246A2305954F0004F64E /* Network.swift */; };
+		FBDA246D230595D40004F64E /* service.html in Resources */ = {isa = PBXBuildFile; fileRef = FBDA246C230595D40004F64E /* service.html */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +59,10 @@
 		FB1E5EBB22FAD51100A42A92 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
 		FB1E5EBC22FAD51100A42A92 /* IQKeyboardManagerSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IQKeyboardManagerSwift.framework; path = Carthage/Build/iOS/IQKeyboardManagerSwift.framework; sourceTree = "<group>"; };
 		FB1E5EBD22FAD51100A42A92 /* JGProgressHUD.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JGProgressHUD.framework; path = Carthage/Build/iOS/JGProgressHUD.framework; sourceTree = "<group>"; };
+		FBDA2466230594D30004F64E /* AppPreferences.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppPreferences.swift; sourceTree = "<group>"; };
+		FBDA2468230595210004F64E /* Crypto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Crypto.swift; sourceTree = "<group>"; };
+		FBDA246A2305954F0004F64E /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
+		FBDA246C230595D40004F64E /* service.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = service.html; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,12 +118,16 @@
 		FB1E5E7A22FAC7BC00A42A92 /* EhautX */ = {
 			isa = PBXGroup;
 			children = (
+				FBDA2465230594B00004F64E /* View */,
+				FBDA2464230594A90004F64E /* Service */,
+				FBDA2463230594A10004F64E /* Model */,
 				FB1E5E7B22FAC7BC00A42A92 /* AppDelegate.swift */,
 				FB1E5E7D22FAC7BC00A42A92 /* ViewController.swift */,
 				FB1E5E7F22FAC7BC00A42A92 /* Main.storyboard */,
 				FB1E5E8222FAC7BC00A42A92 /* Assets.xcassets */,
 				FB1E5E8422FAC7BC00A42A92 /* LaunchScreen.storyboard */,
 				FB1E5E8722FAC7BC00A42A92 /* Info.plist */,
+				FBDA246C230595D40004F64E /* service.html */,
 			);
 			path = EhautX;
 			sourceTree = "<group>";
@@ -147,6 +159,30 @@
 				FB1E5EBA22FAD51100A42A92 /* SkyFloatingLabelTextField.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FBDA2463230594A10004F64E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				FBDA2466230594D30004F64E /* AppPreferences.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		FBDA2464230594A90004F64E /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				FBDA2468230595210004F64E /* Crypto.swift */,
+				FBDA246A2305954F0004F64E /* Network.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		FBDA2465230594B00004F64E /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -254,6 +290,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FBDA246D230595D40004F64E /* service.html in Resources */,
 				FB1E5E8622FAC7BC00A42A92 /* LaunchScreen.storyboard in Resources */,
 				FB1E5E8322FAC7BC00A42A92 /* Assets.xcassets in Resources */,
 				FB1E5E8122FAC7BC00A42A92 /* Main.storyboard in Resources */,
@@ -303,6 +340,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FBDA246B2305954F0004F64E /* Network.swift in Sources */,
+				FBDA2469230595210004F64E /* Crypto.swift in Sources */,
+				FBDA2467230594D30004F64E /* AppPreferences.swift in Sources */,
 				FB1E5E7E22FAC7BC00A42A92 /* ViewController.swift in Sources */,
 				FB1E5E7C22FAC7BC00A42A92 /* AppDelegate.swift in Sources */,
 			);

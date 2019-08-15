@@ -6,7 +6,30 @@
 A easy client for haut campus network.
 
 ## Screenshot
-![screenshot1](https://i.imgur.com/C49BUtI.png)
+
+## Developing
+### Install Carthage
+```sh
+brew install carthage
+```
+
+### Checkout dependencies
+```sh
+git submodule update --init --recursive
+```
+
+### Build dependencies
+#### For iOS
+```sh
+cd EhautX.iOS
+carthage build --platform iOS
+```
+
+#### For macOS
+```sh
+cd EhautX.macOS
+carthage build --platform macOS
+```
 
 ## Contributing
 PR are welcome.
